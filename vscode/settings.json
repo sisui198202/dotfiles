@@ -1,0 +1,147 @@
+{
+        // パネルのデフォルト位置を「右」に設定
+    "workbench.panel.defaultLocation": "right",
+
+    "oracledevtools.connectionConfiguration.configFilesFolder": "/Users/user/Oracle/network/admin",
+    "[oraclesql]": {
+        "editor.suggest.showSnippets": true,
+        "editor.quickSuggestions": {
+            "comments": "on",
+            "strings": "on",
+            "other": "on"
+        }
+    },
+    "oracledevtools.connectionConfiguration.walletFileFolder": "/Users/user/Oracle/network/admin",
+    "oracledevtools.bookmarkFileFolder": "/Users/user/Oracle/oracle.oracledevtools",
+    "oracledevtools.download.otherFolder": "/Users/user/downloads",
+    "vscode-office.editorTheme": "Github Dark",
+    "vscode-office.openOutline": true,
+    "editor.minimap.enabled": false,
+    "workbench.iconTheme": "office-material-icon-theme",
+    "security.workspace.trust.untrustedFiles": "open",
+    "window.confirmSaveUntitledWorkspace": false,
+    "git.openRepositoryInParentFolders": "never",
+    "editor.unicodeHighlight.includeComments": true,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "liveServer.settings.donotShowInfoMsg": true,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "workbench.editor.enablePreview": false,
+    "markdown-pdf.styles": [
+        "/Users/user/MarkdownPDF/github-markdown.css"
+    ],
+    "editor.trimAutoWhitespace": true,
+    "files.trimTrailingWhitespace": true,
+    "workbench.startupEditor": "none",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "editor.unicodeHighlight.nonBasicASCII": false,
+    "playwright.reuseBrowser": true,
+    "playwright.showTrace": false,
+    "playwright.runGlobalSetupOnEachRun": false,
+    "editor.indentSize": "tabSize",
+    "workbench.colorTheme": "Mermaid Dark",
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "accessibility.signals.terminalBell": {
+        "sound": "on"
+    },
+    "editor.fontSize": 11,
+    "chatgpt.config": {
+    "api_key": "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"
+},
+"chatgpt.apiBase": "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",
+"[dockercompose]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+},
+"[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+},
+"markdown-pdf.breaks": true,
+"[markdown]": {
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": {
+        "comments": "off",
+        "strings": "off",
+        "other": "off"
+    }
+},
+"workbench.secondarySideBar.defaultVisibility": "hidden",
+"chat.agent.enabled": false,
+"markdown-pdf.convertOnSave": true,
+"workbench.editor.revealIfOpen": true,
+"markdown-pdf.outputDirectory": "pdf",
+"markdown-pdf.outputDirectoryRelativePathFile": true,
+"explorer.confirmPasteNative": false,
+"code-runner.executorMap": {
+    "javascript": "/Users/user/.volta/bin/node",
+    "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+    "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "zig": "zig run",
+    "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "php": "php",
+    "python": "python -u",
+    "perl": "perl",
+    "perl6": "perl6",
+    "ruby": "ruby",
+    "go": "go run",
+    "lua": "lua",
+    "groovy": "groovy",
+    "powershell": "powershell -ExecutionPolicy ByPass -File",
+    "bat": "cmd /c",
+    "shellscript": "bash",
+    "fsharp": "fsi",
+    "csharp": "scriptcs",
+    "vbscript": "cscript //Nologo",
+    "typescript": "ts-node",
+    "coffeescript": "coffee",
+    "scala": "scala",
+    "swift": "swift",
+    "julia": "julia",
+    "crystal": "crystal",
+    "ocaml": "ocaml",
+    "r": "Rscript",
+    "applescript": "osascript",
+    "clojure": "lein exec",
+    "haxe": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
+    "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
+    "racket": "racket",
+    "scheme": "csi -script",
+    "ahk": "autohotkey",
+    "autoit": "autoit3",
+    "dart": "dart",
+    "pascal": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+    "d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
+    "haskell": "runghc",
+    "nim": "nim compile --verbosity:0 --hints:off --run",
+    "lisp": "sbcl --script",
+    "kit": "kitc --run",
+    "v": "v run",
+    "sass": "sass --style expanded",
+    "scss": "scss --style expanded",
+    "less": "cd $dir && lessc $fileName $fileNameWithoutExt.css",
+    "FortranFreeForm": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "fortran-modern": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "fortran_fixed-form": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "fortran": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "sml": "cd $dir && sml $fileName",
+    "mojo": "mojo run",
+    "erlang": "escript",
+    "spwn": "spwn build",
+    "pkl": "cd $dir && pkl eval -f yaml $fileName -o $fileNameWithoutExt.yaml",
+    "gleam": "gleam run -m $fileNameWithoutExt"
+},
+"claudeCode.preferredLocation": "panel",
+}
