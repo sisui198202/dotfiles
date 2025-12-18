@@ -1,1 +1,0 @@
-{"title":"Escape","rules":[{"description":"RightCommand + Space_Escape","manipulators":[{"type":"basic","from":{"modifiers":{"mandatory":["right_gui"]},"key_code":"spacebar"},"to":[{"repeat":false,"key_code":"escape"}],"to_if_alone":[{"repeat":false,"key_code":"right_gui"}]}]}]}

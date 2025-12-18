@@ -1,1 +1,0 @@
-{"title":"Tab","rules":[{"description":"LeftCommand+F_Tab","manipulators":[{"type":"basic","from":{"modifiers":{"mandatory":["left_control"]},"key_code":"f"},"to":[{"repeat":false,"key_code":"tab"}]}]}]}

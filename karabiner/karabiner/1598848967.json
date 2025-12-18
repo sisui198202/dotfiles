@@ -1,1 +1,0 @@
-{"title":"Copy(new)","rules":[{"description":"RightCommand_Copy","manipulators":[{"type":"basic","from":{"key_code":"right_gui"},"to":[{"repeat":false,"key_code":"right_gui","modifiers":["right_gui"]}],"to_if_alone":[{"repeat":false,"key_code":"c","modifiers":["right_gui"]}]}]}]}

@@ -1,1 +1,0 @@
-{"title":"Home","rules":[{"description":"LeftCommand + N_Home","manipulators":[{"type":"basic","from":{"key_code":"n","modifiers":{"mandatory":["left_control"]}},"to":[{"key_code":"left_arrow","modifiers":["fn"]}]}]}]}
