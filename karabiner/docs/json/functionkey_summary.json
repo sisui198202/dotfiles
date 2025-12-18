@@ -1,0 +1,442 @@
+{
+  "title": "FunctionkeySummary",
+  "rules": [
+    {
+      "description": "FunctionkeySummary",
+      "manipulators": [
+        {
+          "description": "F1_よく使う-md",
+          "type": "basic",
+          "from": {
+            "key_code": "f1"
+          },
+          "to": [
+            {
+              "shell_command": "open '/Users/user/Desktop/test.md'"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.vmware\\.fusion$",
+                "^com\\.vmware\\.horizon$",
+                "^com\\.vmware\\.view$",
+                "^com\\.parallels\\.desktop$",
+                "^com\\.parallels\\.vm$",
+                "^com\\.parallels\\.desktop\\.console$",
+                "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
+                "^com\\.vmware\\.proxyApp\\.",
+                "^com\\.parallels\\.winapp\\."
+              ]
+            }
+          ]
+        },
+        {
+          "description": "F2_Rename",
+          "type": "basic",
+          "from": {
+            "key_code": "f2"
+          },
+          "to": [
+            {
+              "key_code": "return_or_enter"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.vmware\\.fusion$",
+                "^com\\.vmware\\.horizon$",
+                "^com\\.vmware\\.view$",
+                "^com\\.parallels\\.desktop$",
+                "^com\\.parallels\\.vm$",
+                "^com\\.parallels\\.desktop\\.console$",
+                "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
+                "^com\\.vmware\\.proxyApp\\.",
+                "^com\\.parallels\\.winapp\\."
+              ]
+            }
+          ]
+        },
+        {
+          "description": "Double F3_.KeyManageListOpen",
+          "type": "basic",
+          "from": {
+            "key_code": "f3",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open '/Users/user/Dropbox/KeyCustomization/Windows/KeyManageList_windows.xlsx'"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "f3 pressed",
+              "value": 1
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com.vmware.fusion$",
+                "^com.vmware.horizon$",
+                "^com.vmware.view$",
+                "^com.parallels.desktop$",
+                "^com.parallels.vm$",
+                "^com.parallels.desktop.console$",
+                "^org.virtualbox.app.VirtualBoxVM$",
+                "^com.vmware.proxyApp.",
+                "^com.parallels.winapp."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f3",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "f3 pressed",
+                "value": 1
+              }
+            },
+            {
+              "shell_command": "open '/Users/user/Dropbox/KeyCustomization/Mac/KeyManageList_Mac.xlsm'"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com.vmware.fusion$",
+                "^com.vmware.horizon$",
+                "^com.vmware.view$",
+                "^com.parallels.desktop$",
+                "^com.parallels.vm$",
+                "^com.parallels.desktop.console$",
+                "^org.virtualbox.app.VirtualBoxVM$",
+                "^com.vmware.proxyApp.",
+                "^com.parallels.winapp."
+              ]
+            }
+          ],
+          "to_delayed_action": {
+            "to_if_invoked": [
+              {
+                "set_variable": {
+                  "name": "f3 pressed",
+                  "value": 0
+                }
+              }
+            ],
+            "to_if_canceled": [
+              {
+                "set_variable": {
+                  "name": "f3 pressed",
+                  "value": 0
+                }
+              }
+            ]
+          }
+        },
+        {
+          "description": "Double F4_1度押し:Category内ファイル選択,2度押し:RulesSummary",
+          "type": "basic",
+          "from": {
+            "key_code": "f4",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open '/Users/user/Dropbox/Rule/Mac/RulesSummary.md'"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "f4 pressed",
+              "value": 1
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com.vmware.fusion$",
+                "^com.vmware.horizon$",
+                "^com.vmware.view$",
+                "^com.parallels.desktop$",
+                "^com.parallels.vm$",
+                "^com.parallels.desktop.console$",
+                "^org.virtualbox.app.VirtualBoxVM$",
+                "^com.vmware.proxyApp.",
+                "^com.parallels.winapp."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f4",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "f4 pressed",
+                "value": 1
+              }
+            },
+            {
+              "key_code": "f4"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com.vmware.fusion$",
+                "^com.vmware.horizon$",
+                "^com.vmware.view$",
+                "^com.parallels.desktop$",
+                "^com.parallels.vm$",
+                "^com.parallels.desktop.console$",
+                "^org.virtualbox.app.VirtualBoxVM$",
+                "^com.vmware.proxyApp.",
+                "^com.parallels.winapp."
+              ]
+            }
+          ],
+          "to_delayed_action": {
+            "to_if_invoked": [
+              {
+                "set_variable": {
+                  "name": "f4 pressed",
+                  "value": 0
+                }
+              }
+            ],
+            "to_if_canceled": [
+              {
+                "set_variable": {
+                  "name": "f4 pressed",
+                  "value": 0
+                }
+              }
+            ]
+          }
+        },
+        {
+          "description": "Double F5_.zshrc_aliassettingfileOpen(FunctionKey)",
+          "type": "basic",
+          "from": {
+            "key_code": "f5",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open '/Users/user/.zshrc'"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "f5 pressed",
+              "value": 1
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com.vmware.fusion$",
+                "^com.vmware.horizon$",
+                "^com.vmware.view$",
+                "^com.parallels.desktop$",
+                "^com.parallels.vm$",
+                "^com.parallels.desktop.console$",
+                "^org.virtualbox.app.VirtualBoxVM$",
+                "^com.vmware.proxyApp.",
+                "^com.parallels.winapp."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f5",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "f5 pressed",
+                "value": 1
+              }
+            },
+            {
+              "shell_command": "open '/Users/user/.zsh/alias_setting.zsh'"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com.vmware.fusion$",
+                "^com.vmware.horizon$",
+                "^com.vmware.view$",
+                "^com.parallels.desktop$",
+                "^com.parallels.vm$",
+                "^com.parallels.desktop.console$",
+                "^org.virtualbox.app.VirtualBoxVM$",
+                "^com.vmware.proxyApp.",
+                "^com.parallels.winapp."
+              ]
+            }
+          ],
+          "to_delayed_action": {
+            "to_if_invoked": [
+              {
+                "set_variable": {
+                  "name": "f5 pressed",
+                  "value": 0
+                }
+              }
+            ],
+            "to_if_canceled": [
+              {
+                "set_variable": {
+                  "name": "f5 pressed",
+                  "value": 0
+                }
+              }
+            ]
+          }
+        },
+        {
+          "description": "Double F11_GeneralPassword_serverPassword_fileOpen",
+          "type": "basic",
+          "from": {
+            "key_code": "f11",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open '/Users/user/Dropbox/Password/server_ftp_password.ini'"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "f11 pressed",
+              "value": 1
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com.vmware.fusion$",
+                "^com.vmware.horizon$",
+                "^com.vmware.view$",
+                "^com.parallels.desktop$",
+                "^com.parallels.vm$",
+                "^com.parallels.desktop.console$",
+                "^org.virtualbox.app.VirtualBoxVM$",
+                "^com.vmware.proxyApp.",
+                "^com.parallels.winapp."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f11",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "f11 pressed",
+                "value": 1
+              }
+            },
+            {
+              "shell_command": "open '/Users/user/Dropbox/Password/PasswordList.INI'"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com.vmware.fusion$",
+                "^com.vmware.horizon$",
+                "^com.vmware.view$",
+                "^com.parallels.desktop$",
+                "^com.parallels.vm$",
+                "^com.parallels.desktop.console$",
+                "^org.virtualbox.app.VirtualBoxVM$",
+                "^com.vmware.proxyApp.",
+                "^com.parallels.winapp."
+              ]
+            }
+          ],
+          "to_delayed_action": {
+            "to_if_invoked": [
+              {
+                "set_variable": {
+                  "name": "f11 pressed",
+                  "value": 0
+                }
+              }
+            ],
+            "to_if_canceled": [
+              {
+                "set_variable": {
+                  "name": "f11 pressed",
+                  "value": 0
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

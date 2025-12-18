@@ -1,0 +1,17 @@
+{
+  "title": "保留_FrontmostIfReadgamen_band-line-preview-kindle-eagle-discord_summary",
+  "rules": [
+    {
+      "description": "保留_FrontmostIfReadgamen_band-line-preview-kindle-eagle-discord_summary",
+      "manipulators": [
+        {
+          "description": "<key1> + <key2>_機能名",
+          "type": "basic",
+          "from": <%= from("c", ["left_alt"], ["caps_lock"]) %>,
+          "to": <%= to([["f12", ["right_shift"]]]) %>,
+          "conditions": [ <%= frontmost_application_if("chrome") %> ]
+        }
+      ]
+    }
+  ]
+}

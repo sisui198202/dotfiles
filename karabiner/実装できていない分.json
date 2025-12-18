@@ -1,0 +1,27 @@
+    keymap_global["LCmd-Quote"] = "Cmd-H"  # HideFrontmostAppWindow
+    keymap_global["LCmd-Z"] = "RCmd-Enter"  # RowCursolNewline
+    keymap_global["LCmd-P"] = "RCtrl-Shift-P"  # focus_side_bar
+    keymap_global["LCmd-CloseBracket"] = "Ctrl-Shift-1"  # unindent
+
+    # CurrentLineEndLineSelectAll(sublime)
+    keymap_global["LCmd-Tab"] = "LShift-LAlt-Q", "Cmd-Down", "LShift-LAlt-Z"
+    keymap_global["RCmd-Slash"] = "RCtrl-Shift-I"  # SelectAllSameWord2(vscode)
+    
+    keymap_global["LCmd-D-RCmd"] = "LShift-Plus"  # Plus
+    keymap_global["D-RCmd-LCmd"] = "Shift-Underscore"  # 直接入力でunderbar
+    keymap_global["LCmd-RAlt"] = "Plus"  # equal
+
+    keymap_global["LAlt-Space"] = "Return"  # Enter/Return
+    keymap_global["LAlt-O"] = "Cmd-S"  # 上書き保存
+    keymap_global["LAlt-N"] = "Shift-Cmd-H"  # prettifyコードを整形
+    keymap_global["LAlt-F"] = "Ctrl-Cmd-N"  # SublimeFileControl(sublime)
+
+    keymap_global["LAlt-T"] = "RCmd-LShift-8"  # Terminal Focus (vscode)
+    keymap_global["LAlt-B"] = "LAlt-B", 'Enter'  # Terminal Focus (vscode)
+    keymap_global["LAlt-V"] = "RCmd-LShift-P"  # Terminal Clear (vscode)
+    keymap_global["RCmd-Comma"] = "RCmd-LAlt-O" # Terminal Panel Max Toggle (vscode)
+
+    keymap_global["LAlt-Q"] = "LAlt-4"  # Window UP
+    keymap_global["LAlt-P"] = "LAlt-5"  # Window down
+    keymap_global["LAlt-W"] = "LAlt-7"  # Window Right up
+    keymap_global["LAlt-E"] = "LAlt-9"  # Window Right down

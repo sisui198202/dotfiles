@@ -1,0 +1,473 @@
+{
+    "title": "FrontmostIfVirtual_Pararelldesk_Summary",
+    "rules": [
+    {
+      "description": "FrontmostIfVirtual_Pararelldesk_Summary(VirtualMachine)",
+      "manipulators": [
+          {
+            "description": "LeftCommand + N_Dropboxディレクトリへ",
+            "type": "basic",
+            "from": <%= from("n", ["left_control"], ["caps_lock"]) %>,
+            "to": <%= to([["2", ["right_control"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("virtual_machine") %> ]
+          },
+          {
+            "description": "LeftCommand + M_GoogleDriveディレクトリへ",
+            "type": "basic",
+            "from": <%= from("m", ["left_control"], ["caps_lock"]) %>,
+            "to": <%= to([["3", ["right_control"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("virtual_machine") %> ]
+          },
+          {
+            "description": "RightCommand + Space_delete",
+            "type": "basic",
+            "from": <%= from("spacebar", ["right_gui"], ["any"]) %>,
+            "to": <%= to([["4", ["right_control"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("virtual_machine") %> ]
+          },
+          {
+            "description": "LeftCommand + ゼロ_Vscode2Row",
+            "type": "basic",
+            "from": <%= from("0", ["left_control"], ["any"]) %>,
+            "to": <%= to([["5", ["right_control"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("virtual_machine") %> ]
+          },
+          {
+            "description": "LeftCommand + S_Cut",
+            "type": "basic",
+            "from": <%= from("s", ["left_control"], ["caps_lock"]) %>,
+            "to": <%= to([["6", ["right_control"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("virtual_machine") %> ]
+          },
+          {
+            "description": "RightCommand + Y_カレント行/列削除",
+            "type": "basic",
+            "from": <%= from("y", ["right_gui"]) %>,
+            "to": <%= to([["0", ["right_option"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("virtual_machine") %> ]
+          },
+          {
+            "description": "LeftCommand + Q_LeftHalfWindowMove",
+            "type": "basic",
+            "from": <%= from("q", ["left_control"], ["caps_lock"]) %>,
+            "to": <%= to([["2", ["right_option"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("virtual_machine") %> ]
+          },
+          {
+            "description": "RightCommand + P_RightHalfWindowMove",
+            "type": "basic",
+            "from": <%= from("p", ["right_gui"], ["caps_lock"]) %>,
+            "to": <%= to([["3", ["right_option"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("virtual_machine") %> ]
+          },
+          {
+          "description": "RightCommand + O(オー)_SameWordExpandSelection",
+            "type": "basic",
+            "from": <%= from("o", ["right_gui"], ["caps_lock"]) %>,
+            "to": <%= to([["4", ["right_option"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("virtual_machine") %> ]
+          },
+          {
+          "description": "RightCommand + K_CopyCurrentRowCut",
+            "type": "basic",
+            "from": <%= from("k", ["right_gui"], ["caps_lock"]) %>,
+            "to": <%= to([["5", ["right_option"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("virtual_machine") %> ]
+          },
+          {
+          "description": "RightCommand + Semicolon_LatestTabToggle",
+            "type": "basic",
+            "from": <%= from("semicolon", ["right_gui"], ["caps_lock"]) %>,
+            "to": <%= to([["6", ["right_option"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("virtual_machine") %> ]
+          },
+          {
+            "description": "RightCommand + L_NextTab",
+            "type": "basic",
+            "from": <%= from("l", ["right_gui"], ["caps_lock"]) %>,
+            "to": <%= to([["7", ["right_option"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("virtual_machine") %> ]
+          },
+          {
+          "description": "RightCommand + U_ColumnSelection",
+            "type": "basic",
+            "from": <%= from("u", ["right_gui"], ["caps_lock"]) %>,
+            "to": <%= to([["8", ["right_option"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("virtual_machine") %> ]
+          },
+          {
+          "description": "LeftCommand + D_AllSelect",
+            "type": "basic",
+            "from": <%= from("d", ["left_control"], ["caps_lock"]) %>,
+            "to": <%= to([["9", ["right_option"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("virtual_machine") %> ]
+          },
+          {
+            "description": "RightCommand + T_Search",
+            "type": "basic",
+            "from": <%= from("t", ["right_gui"], ["caps_lock"]) %>,
+            "to": <%= to([["hyphen", ["right_option"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("virtual_machine") %> ]
+          },
+          {
+            "description": "RightCommand + J_1RowSelect",
+            "type": "basic",
+            "from": <%= from("j", ["right_gui"], ["caps_lock"]) %>,
+            "to": <%= to([["hyphen", ["left_option"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("virtual_machine") %> ]
+          },
+          {
+          "description": "LeftCommand + O(オー)_Column2SplitEditerScreen",
+            "type": "basic",
+            "from": <%= from("o", ["left_control"], ["caps_lock"]) %>,
+            "to": <%= to([["0", ["left_option"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("virtual_machine") %> ]
+          },
+          {
+            "description": "RightCommand + J_1RowSelection",
+            "type": "basic",
+            "from": <%= from("j", ["right_gui"], ["caps_lock"]) %>,
+            "to": <%= to([["1", ["left_option"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("virtual_machine") %>]
+          },
+          {
+            "description": "LeftOption + slash_ExploerActive",
+            "type": "basic",
+            "from": <%= from("slash", ["left_option"], ["caps_lock"]) %>,
+            "to": <%= to([["2", "left_option"]]) %>,
+            "conditions": [ <%= frontmost_application_if("virtual_machine") %>]
+          },
+          {
+          "description": "RightCommand + /_expansion-SameWordExpandSelection",
+            "type": "basic",
+            "from": <%= from("slash", ["right_gui"], ["caps_lock"]) %>,
+            "to": <%= to([["3", ["left_option"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("virtual_machine") %> ]
+          },
+          {
+          "description": "LeftCommand + T_サイドバー切替-workbench.action.toggleSidebarVisibility[vscode,sublime],カレント行/列追加[excel]",
+            "type": "basic",
+            "from": <%= from("t", ["left_control"], ["caps_lock"]) %>,
+            "to": <%= to([["4", ["left_option"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("virtual_machine") %> ]
+          },
+          {
+          "description": "LeftCommand + X_iterm2ActiveWindow",
+            "type": "basic",
+            "from": <%= from("x", ["left_control"], ["caps_lock"]) %>,
+            "to": <%= to([["5", ["left_option"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("virtual_machine") %> ]
+          },
+          {
+            "description": "LeftCommand + U_Undo",
+            "type": "basic",
+            "from": <%= from("u", ["left_control"], ["caps_lock"]) %>,
+            "to": <%= to([["6", ["left_option"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("virtual_machine") %> ]
+          },
+          {
+              "description": "RightCommand + ._MaxWindow",
+              "type": "basic",
+              "from": <%= from("period", ["right_gui"], ["caps_lock"]) %>,
+              "to": <%= to([["7", "left_option"]]) %>,
+              "conditions": [ <%= frontmost_application_if("virtual_machine") %>]
+          },
+          {
+            "description": "LeftOption + Comma_copyFilePath",
+            "type": "basic",
+            "from": <%= from("comma", ["left_option"], ["caps_lock"]) %>,
+            "to": <%= to([["8", ["left_option"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("virtual_machine") %> ]
+          },
+          {
+            "description": "RightCommand + H_フォルダービューにフォーカスを置く",
+            "type": "basic",
+            "from": <%= from("h", ["right_gui"], ["caps_lock"]) %>,
+            "to": <%= to([["9", ["left_option"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("virtual_machine") %> ]
+          },
+          {
+            "description": "LeftCommand + W_CurrentCursol-EndRowSelect",
+            "type": "basic",
+            "from": <%= from("w", ["left_control"], ["caps_lock"]) %>,
+            "to": <%= to([["equal_sign", "left_option"]]) %>,
+            "conditions": [ <%= frontmost_application_if("virtual_machine") %>]
+          },
+        {
+          "description": "LeftCommand、 英語モードへ",
+          "type": "basic",
+          "from": {
+            "key_code": "left_control",
+            "modifiers": {
+              "optional": [
+                "caps_lock"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_control",
+              "lazy": true
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "f12",
+              "modifiers": [
+                "left_control"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.vmware\\.fusion$",
+                "^com\\.vmware\\.horizon$",
+                "^com\\.vmware\\.view$",
+                "^com\\.parallels\\.desktop$",
+                "^com\\.parallels\\.vm$",
+                "^com\\.parallels\\.desktop\\.console$",
+                "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
+                "^com\\.vmware\\.proxyApp\\.",
+                "^com\\.parallels\\.winapp\\."
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "description": "RightCommand、 日本語モードへ",
+          "type": "basic",
+          "from": {
+            "key_code": "right_command",
+            "modifiers": {
+              "optional": [
+                "caps_lock"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "right_command",
+              "lazy": true
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "f9",
+              "modifiers": [
+                "left_control"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.vmware\\.fusion$",
+                "^com\\.vmware\\.horizon$",
+                "^com\\.vmware\\.view$",
+                "^com\\.parallels\\.desktop$",
+                "^com\\.parallels\\.vm$",
+                "^com\\.parallels\\.desktop\\.console$",
+                "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
+                "^com\\.vmware\\.proxyApp\\.",
+                "^com\\.parallels\\.winapp\\."
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "description": "LeftCommand + Comma_AppsSelect-previous",
+          "type": "basic",
+          "from": {
+            "modifiers": {
+              "mandatory": [
+                "left_control"
+              ],
+            "optional": [
+              "caps_lock"
+            ]
+            },
+            "key_code": "comma"
+          },
+          "to": [
+            {
+              "repeat": true,
+              "key_code": "tab",
+              "modifiers": [
+                "left_alt",
+                "right_shift"
+              ],
+              "halt": true
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com.vmware.fusion$",
+                "^com.vmware.horizon$",
+                "^com.vmware.view$",
+                "^com.parallels.desktop$",
+                "^com.parallels.vm$",
+                "^com.parallels.desktop.console$",
+                "^org.virtualbox.app.VirtualBoxVM$",
+                "^com.vmware.proxyApp.",
+                "^com.parallels.winapp."
+              ]
+            }
+          ]
+        },
+        {
+          "description": "LeftCommand + Period_AppsSelect-next",
+          "type": "basic",
+          "from": {
+            "modifiers": {
+              "mandatory": [
+                "left_control"
+              ],
+            "optional": [
+              "caps_lock"
+            ]
+            },
+            "key_code": "period"
+          },
+          "to": [
+            {
+              "repeat": true,
+              "key_code": "tab",
+              "modifiers": [
+                "right_alt"
+              ],
+              "halt": true
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com.vmware.fusion$",
+                "^com.vmware.horizon$",
+                "^com.vmware.view$",
+                "^com.parallels.desktop$",
+                "^com.parallels.vm$",
+                "^com.parallels.desktop.console$",
+                "^org.virtualbox.app.VirtualBoxVM$",
+                "^com.vmware.proxyApp.",
+                "^com.parallels.winapp."
+              ]
+            }
+          ]
+        },
+        {
+        	"description": "RightCommand + A_NewFileCreate",
+          "type": "basic",
+          "from": <%= from("a", ["right_gui"], ["caps_lock"]) %>,
+          "to": <%= to([["n", ["right_option"]]]) %>,
+          "conditions": [ <%= frontmost_application_if("virtual_machine") %>]
+        },
+        {
+         "description": "LeftCommand + Quote_Single Column Editor Layout",
+          "type": "basic",
+          "from": <%= from("quote", ["left_control"], ["caps_lock"]) %>,
+          "to": <%= to([["h", ["right_control"]]]) %>,
+          "conditions": [ <%= frontmost_application_if("virtual_machine") %> ]
+        },
+        {
+        	"description": "RightCommand + i_Neight bour",
+          "type": "basic",
+          "from": <%= from("i", ["right_gui"], ["caps_lock"]) %>,
+          "to": <%= to([["i", ["right_control"]]]) %>,
+          "conditions": [ <%= frontmost_application_if("virtual_machine") %> ]
+        },
+        {
+         "description": "RightCommand + Z_0[ゼロ]",
+          "type": "basic",
+          "from": <%= from("z", ["right_gui"], ["caps_lock"]) %>,
+          "to": <%= to([["0"]]) %>,
+          "conditions": [ <%= frontmost_application_if("virtual_machine") %> ]
+        },
+        {
+          "description": "RightCommand + X_1",
+          "type": "basic",
+          "from": <%= from("x", ["right_gui"], ["caps_lock"]) %>,
+          "to": <%= to([["1"]]) %>,
+          "conditions": [ <%= frontmost_application_if("virtual_machine") %> ]
+        },
+        {
+          "description": "RightCommand + C_2",
+          "type": "basic",
+          "from": <%= from("c", ["right_gui"], ["caps_lock"]) %>,
+          "to": <%= to([["2"]]) %>,
+          "conditions": [ <%= frontmost_application_if("virtual_machine") %> ]
+        },
+        {
+          "description": "RightCommand + V_3",
+          "type": "basic",
+          "from": <%= from("v", ["right_gui"], ["caps_lock"]) %>,
+          "to": <%= to([["3"]]) %>,
+          "conditions": [ <%= frontmost_application_if("virtual_machine") %> ]
+        },
+        {
+         "description": "LeftContorl_CellEdit",
+          "type": "basic",
+          "from": <%= from("fn") %>,
+          "to": <%= to([["f2"]]) %>,
+          "conditions": [ <%= frontmost_application_if("virtual_machine") %> ]
+        },
+        {
+        "description": "LeftCommand + RightCommand_plus",
+        "type": "basic",
+        "from": <%= from("right_gui", ["left_control"], ["caps_lock"]) %>,
+        "to": <%= to([["equal_sign", ["left_shift"]]]) %>,
+        "conditions": [ <%= frontmost_application_if("virtual_machine") %> ]
+        },
+        {
+        "description": "LeftCommand + RightOption_equal",
+        "type": "basic",
+        "from": <%= from("right_option", ["left_control"], ["caps_lock"]) %>,
+        "to": <%= to([["equal_sign"]]) %>,
+        "conditions": [ <%= frontmost_application_if("virtual_machine") %> ]
+        },
+        {
+         "description": "Leftoption + Rightoption_parsent",
+          "type": "basic",
+          "from": <%= from("right_alt", ["left_alt"], ["caps_lock"]) %>,
+          "to": <%= to([["5", ["left_shift"]]]) %>,
+          "conditions": [ <%= frontmost_application_if("virtual_machine") %> ]
+        },
+        {
+          "description": "Rightoption + Leftoption_anbasado",
+          "type": "basic",
+          "from": <%= from("left_alt", ["right_alt"], ["caps_lock"]) %>,
+          "to": <%= to([["7", ["left_shift"]]]) %>,
+          "conditions": [ <%= frontmost_application_if("virtual_machine") %> ]
+        },
+        {
+        "description": "RightCommand + LeftCommand_underbar",
+        "type": "basic",
+        "from": <%= from("left_control", ["right_gui"], ["caps_lock"]) %>,
+        "to": <%= to([["japanese_eisuu"], ["hyphen", "right_shift"]]) %>,
+        "conditions": [ <%= frontmost_application_if("virtual_machine") %> ]
+        },
+        {
+        "description": "Leftoption + Rightcommand_hypen",
+        "type": "basic",
+        "from": <%= from("right_gui", ["left_alt"], ["caps_lock"]) %>,
+        "to": <%= to([["hyphen"]]) %>,
+        "conditions": [ <%= frontmost_application_if("virtual_machine") %> ]
+        },
+        {
+        "description": "RightCommand + Leftoption_backslash",
+        "type": "basic",
+        "from": <%= from("left_alt", ["right_gui"], ["caps_lock"]) %>,
+        "to": <%= to([["backslash"]]) %>,
+        "conditions": [ <%= frontmost_application_if("virtual_machine") %> ]
+        }
+      ]
+        }
+    ]
+}

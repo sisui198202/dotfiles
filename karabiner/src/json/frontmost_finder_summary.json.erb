@@ -1,0 +1,170 @@
+{
+    "title": "FrontmostIfFinder_summary",
+    "rules": [
+      {
+        "description": "FrontmostIfFinder_summary",
+        "manipulators": [
+          {
+            "description": "LeftOption + Y_リスト(Finder)",
+            "type": "basic",
+            "from": <%= from("y", ["left_option"]) %>,
+            "to": <%= to([["2", ["left_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("finder") %> ]
+          },
+          {
+            "description": "LeftOption + i_親ディレクトリへ",
+            "type": "basic",
+            "from": <%= from("i", ["left_option"], ["caps_lock"]) %>,
+            "to": <%= to([["up_arrow", ["right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("finder") %> ]
+          },
+          {
+            "description": "RightOption + A_新規Finderウィンドウ",
+            "type": "basic",
+            "from": <%= from("a", ["right_option"]) %>,
+            "to": <%= to([["5", ["left_shift","left_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("finder") %>]
+          },
+          {
+            "description": "RightOption + S_マイドライブ/Summary",
+            "type": "basic",
+            "from": <%= from("s", ["right_option"], ["caps_lock"]) %>,
+            "to": <%= set_shell_command(["open -a 'Finder' '/Users/user/Library/CloudStorage/GoogleDrive-aruke570209@gmail.com/マイドライブ/Summary'"]) %>,
+            "conditions": [ <%= frontmost_application_if("finder") %>]
+          },
+          {
+            "description": "LeftOption + N_Dropbox",
+            "type": "basic",
+            "from": <%= from("n", ["left_option"]) %>,
+            "to": <%= set_shell_command(["open -a 'Finder' /Users/user/Dropbox"]) %>,
+            "conditions": [ <%= frontmost_application_if("finder") %> ]
+          },
+          {
+            "description": "RightCommand + L_前のタブを選択",
+            "type": "basic",
+            "from": <%= from("l", ["right_gui"]) %>,
+            "to": <%= to([["1", ["left_shift","left_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("finder") %> ]
+          },
+          {
+            "description": "RightCommand + セミコロン_次のタブを選択",
+            "type": "basic",
+            "from": <%= from("semicolon", ["right_gui"]) %>,
+            "to": <%= to([["2", ["left_shift","left_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("finder") %> ]
+          },
+          {
+            "description": "LeftOption + M_GoogleDrive",
+            "type": "basic",
+            "from": <%= from("m", ["left_option"]) %>,
+            "to": <%= to([["3", ["left_shift","left_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("finder") %> ]
+          },
+          {
+            "description": "LeftCommand + Z_最近の項目",
+            "type": "basic",
+            "from": <%= from("z", ["left_control"]) %>,
+            "to": <%= to([["4", ["left_shift","left_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("finder") %> ]
+          },
+          {
+            "description": "LeftOption + U_カラム",
+            "type": "basic",
+            "from": <%= from("u", ["left_option"]) %>,
+            "to": <%= to([["3", ["left_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("finder") %> ]
+          },
+          {
+            "description": "LeftCommand + オウ_デュアルモードの切替",
+            "type": "basic",
+            "from": <%= from("o", ["left_control"]) %>,
+            "to": <%= to([["u", ["left_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("finder") %> ]
+          },
+          {
+            "description": "LeftCommand + T_サイドバー切替",
+            "type": "basic",
+            "from": <%= from("t", ["left_control"]) %>,
+            "to": <%= to([["s", ["left_gui","left_control"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("finder") %> ]
+          },
+          {
+            "description": "RightCommand + A_新規タブ作成",
+            "type": "basic",
+            "from": <%= from("a", ["right_gui"]) %>,
+            "to": <%= to([["t", ["left_shift","left_control"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("finder") %> ]
+          },
+          {
+            "description": "RightCommand + i_アクティブなパネルの切替",
+            "type": "basic",
+            "from": <%= from("i", ["right_gui"]) %>,
+            "to": <%= to([["tab", ["left_option"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("finder") %> ]
+          },
+          {
+            "description": "LeftOption + D_Desktop",
+            "type": "basic",
+            "from": <%= from("d", ["left_option"]) %>,
+            "to": <%= to([["d", ["left_shift","left_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("finder") %> ]
+          },
+          {
+            "description": "F2_Rename",
+            "type": "basic",
+            "from": <%= from("f2") %>,
+            "to": <%= to([["return_or_enter"]]) %>,
+            "conditions": [ <%= frontmost_application_if("finder") %> ]
+          },
+          {
+            "description": "RightCommand + Space_FileDelete",
+            "type": "basic",
+            "from": <%= from("spacebar", ["right_gui"]) %>,
+            "to": <%= to([["delete_or_backspace", ["left_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("finder") %> ]
+          },
+          {
+            "description": "LeftOption + SpaceBar_FileOpen",
+            "type": "basic",
+            "from": <%= from("spacebar", ["left_option"]) %>,
+            "to": <%= to([["o", ["right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("finder") %> ]
+          },
+          {
+            "description": "LeftAlt + A_FolderCreate",
+            "type": "basic",
+            "from": <%= from("a", ["left_alt"]) %>,
+            "to": <%= to([["n", ["right_gui","right_shift"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("finder") %> ]
+          },
+          {
+            "description": "LeftOption + F_FrontICollectionsFileCreate",
+            "type": "basic",
+            "from": <%= from("f", ["left_option"]) %>,
+            "to": <%= set_shell_command(["touch '/Users/user/Desktop/iCollections/TmpFile/z.txt'"]) %>,
+            "conditions": [ <%= frontmost_application_if("finder") %> ]
+          },
+          {
+            "description": "LeftControl_Rename",
+            "type": "basic",
+            "from": {
+              "apple_vendor_top_case_key_code":"keyboard_fn"
+            },
+            "to": [
+              {
+                "key_code": "return_or_enter"
+              }
+            ],
+            "conditions": [
+              {
+                "type": "frontmost_application_if",
+                "bundle_identifiers": [
+                  "^com\\.apple\\.finder$"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+}

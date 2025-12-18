@@ -1,0 +1,73 @@
+{
+  "title": "FrontmostIfNotion_summary1",
+  "rules": [
+    {
+      "description": "FrontmostIfNotion_summary1",
+      "manipulators": [
+        {
+          "description": "RightOption + A_新しいNotionウィンドウを開く",
+          "type": "basic",
+          "from": {
+            "key_code": "a",
+            "modifiers": {
+              "mandatory": [
+                "right_option"
+              ],
+              "optional": [
+                "caps_lock"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "n",
+              "modifiers": [
+                "left_shift",
+                "right_gui"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^notion.id$"
+              ]
+            }
+          ]
+        },
+        {
+          "description": "LeftCommand + enter_戻る",
+          "type": "basic",
+          "from": {
+            "key_code": "return_or_enter",
+            "modifiers": {
+              "mandatory": [
+                "left_control"
+              ],
+              "optional": [
+                "caps_lock"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "open_bracket",
+              "modifiers": [
+                "left_gui"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^notion.id$"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,206 @@
+{
+    "title": "FrontmostIfMi_summary",
+    "rules": [
+      {
+        "description": "FrontmostIfMi_summary",
+        "manipulators": [
+          {
+            "description": "RightOption + A_現在のタブをウインドウ化",
+            "type": "basic",
+            "from": <%= from("a", ["right_option"], ["caps_lock"]) %>,
+            "to": <%= to([["3", ["left_shift", "right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("mi") %> ]
+          },
+          {
+            "description": "LeftOption+ N_NumberList",
+            "type": "basic",
+            "from": <%= from("n", ["left_option"], ["caps_lock"]) %>,
+            "to": <%= to([["9", ["left_control", "left_shift"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("mi") %> ]
+          },
+          {
+            "description": "RightCommand + J_1RowSelection",
+            "type": "basic",
+            "from": <%= from("j", ["right_gui"]) %>,
+            "to": <%= to([["a", ["left_control"]], ["down_arrow", "left_shift"], ["c", ["right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("mi") %> ]
+          },
+          {
+            "description": "RightCommand + K_CopyCurrentRowCut",
+            "type": "basic",
+            "from": <%= from("k", ["right_gui"]) %>,
+            "to": <%= to([["a", ["left_control"]], ["down_arrow", "left_shift"], ["c", ["right_gui"]], ["delete_or_backspace"]]) %>,
+            "conditions": [ <%= frontmost_application_if("mi") %> ]
+          },
+          {
+            "description": "LeftCommand + Z_RowCursolNewline",
+            "type": "basic",
+            "from": <%= from("z", ["left_control"], ["caps_lock"]) %>,
+            "to": <%= to([["e", ["left_control"]], ["return_or_enter"]]) %>,
+            "conditions": [ <%= frontmost_application_if("mi") %> ]
+          },
+          {
+            "description": "LeftAlt + R_Replace",
+            "type": "basic",
+            "from": <%= from("r", ["left_alt"], ["caps_lock"]) %>,
+            "to": <%= to([["f", ["right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("mi") %> ]
+          },
+          {
+            "description": "RightCommand + L_NextTab",
+            "type": "basic",
+            "from": <%= from("l", ["right_gui"], ["caps_lock"]) %>,
+            "to": <%= to([["open_bracket", ["left_shift", "right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("mi") %> ]
+          },
+          {
+            "description": "RightCommand + Semicolon_LatestTabToggle",
+            "type": "basic",
+            "from": <%= from("semicolon", ["right_gui"], ["caps_lock"]) %>,
+            "to": <%= to([["close_bracket", ["left_shift", "right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("mi") %> ]
+          },
+          {
+            "description": "LeftAlt + M_マーク設定",
+            "type": "basic",
+            "from": <%= from("m", ["left_alt"], ["caps_lock"]) %>,
+            "to": <%= to([["q", ["left_control", "right_shift"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("mi") %> ]
+          },
+          {
+            "description": "LeftCommand + B_PageDown",
+            "type": "basic",
+            "from": <%= from("b", ["left_control"], ["caps_lock"]) %>,
+            "to": <%= to([["b", ["left_control", "right_option"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("mi") %> ]
+          },
+          {
+            "description": "LeftCommand + /(スラッシュ)_PageUp",
+            "type": "basic",
+            "from": <%= from("slash", ["left_control"], ["caps_lock"]) %>,
+            "to": <%= to([["r", ["left_control", "right_option"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("mi") %> ]
+          },
+          {
+            "description": "RightAlt + M_マークと選択範囲とスワップ",
+            "type": "basic",
+            "from": <%= from("m", ["right_alt"], ["caps_lock"]) %>,
+            "to": <%= to([["w", ["left_control", "right_shift"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("mi") %> ]
+          },
+          {
+            "description": "LeftCommand + N_HeadRowCursol",
+            "type": "basic",
+            "from": <%= from("n", ["left_control"], ["caps_lock"]) %>,
+            "to": <%= to([["up_arrow", ["right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("mi") %> ]
+          },
+          {
+            "description": "LeftCommand + M_EndRowCursol",
+            "type": "basic",
+            "from": <%= from("m", ["left_control"], ["caps_lock"]) %>,
+            "to": <%= to([["down_arrow", ["right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("mi") %> ]
+          },
+          {
+            "description": "Marukako_OpenCloseInput",
+            "type": "basic",
+            "from": <%= from("9", ["left_shift"], ["caps_lock"]) %>,
+            "to": <%= to([["japanese_eisuu"], ["9", ["left_shift"]], ["0", ["left_shift"]], ["left_arrow"]]) %>,
+            "conditions": [ <%= frontmost_application_if("mi") %> ]
+          },
+          {
+            "description": "Namikako_OpenCloseInput",
+            "type": "basic",
+            "from": <%= from("open_bracket", ["left_shift"], ["caps_lock"]) %>,
+            "to": <%= to([["japanese_eisuu"], ["open_bracket", ["left_shift"]], ["close_bracket", ["left_shift"]], ["left_arrow"]]) %>,
+            "conditions": [ <%= frontmost_application_if("mi") %> ]
+          },
+          {
+            "description": "DoubleQuote_OpenCloseInput",
+            "type": "basic",
+            "from": <%= from("quote", ["left_shift"], ["caps_lock"]) %>,
+            "to": <%= to([["japanese_eisuu"], ["quote", ["left_shift"]], ["quote", ["left_shift"]], ["left_arrow"]]) %>,
+            "conditions": [ <%= frontmost_application_if("mi") %> ]
+          },
+          {
+            "description": "LeftShift + Comma_Dainari-Syonari",
+            "type": "basic",
+            "from": <%= from("comma", ["left_shift"], ["caps_lock"]) %>,
+            "to": <%= to([["japanese_eisuu"], ["comma", ["left_shift"]], ["period", ["left_shift"]], ["left_arrow"]]) %>,
+            "conditions": [ <%= frontmost_application_if("mi") %> ]
+          },
+          {
+            "description": "Kakukako(en)_OpenCloseInput",
+            "type": "basic",
+            "from": {
+              "key_code": "open_bracket",
+              "modifiers": {
+                "optional": [
+                  "caps_lock"
+                ]
+              }
+            },
+            "to": [
+              {
+                "key_code": "open_bracket"
+              },
+              {
+                "key_code": "close_bracket"
+              },
+              {
+                "key_code": "left_arrow"
+              }
+            ],
+            "conditions": [
+              {
+                "type": "input_source_if",
+                "input_sources": [{ "language": "en" }]
+              },
+              {
+                "type": "frontmost_application_if",
+                "bundle_identifiers": [
+                  "^net.mimikaki.mi$"
+                ]
+              }
+            ]
+          },
+          {
+              "description": "Kagikako(ja)_OpenCloseInput",
+              "type": "basic",
+              "from": {
+                "key_code": "open_bracket",
+                "modifiers": {
+                  "optional": [
+                    "caps_lock"
+                  ]
+                }
+              },
+              "to": [
+                {
+                  "key_code": "open_bracket"
+                },
+                {
+                  "key_code": "close_bracket"
+                },
+                {
+                  "key_code": "left_arrow"
+                }
+              ],
+              "conditions": [
+                {
+                  "type": "input_source_if",
+                  "input_sources": [{ "language": "ja" }]
+                },
+                {
+                  "type": "frontmost_application_if",
+                  "bundle_identifiers": [
+                    "^net.mimikaki.mi$"
+                  ]
+                }
+              ]
+            }
+        ]
+      }
+    ]
+}

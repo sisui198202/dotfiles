@@ -1,0 +1,15 @@
+{
+    "title": "FrontmostIfFunctionKey",
+    "rules": [
+    {
+      "description": "{キー1} + {キー2}_ここから登録(FunctionKey)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": <%= from("u", ["left_alt"], ["caps_lock"]) %>,
+          "to": <%= to([["l","right_gui"], ["c", "right_gui"]]) %>
+        }
+      ]
+    }
+    ]
+}

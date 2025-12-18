@@ -1,0 +1,1 @@
+{"title":"End","rules":[{"description":"LeftCommand + M_End","manipulators":[{"type":"basic","from":{"key_code":"m","modifiers":{"mandatory":["left_control"]}},"to":[{"key_code":"right_arrow","modifiers":["fn"]}]}]}]}

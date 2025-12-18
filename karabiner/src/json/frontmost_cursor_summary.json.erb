@@ -1,0 +1,819 @@
+{
+    "title": "FrontmostIfCursor_summary99",
+    "rules": [
+      {
+        "description": "FrontmostIfCursor_summary99",
+        "manipulators": [
+          {
+            "description": "J_DownArrow",
+            "type": "basic",
+            "from": <%= from("j", ["caps_lock"]) %>,
+            "to": <%= to([["down_arrow"]]) %>,
+            "conditions": [<%= frontmost_application_if("cursor") %>]
+          },
+          {
+            "description": "K_UpArrow",
+            "type": "basic",
+            "from": <%= from("k",["caps_lock"]) %>,
+            "to": <%= to([["up_arrow"]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "L_RightArrow",
+            "type": "basic",
+            "from": <%= from("l", ["caps_lock"]) %>,
+            "to": <%= to([["right_arrow"]]) %>,
+            "conditions": [<%= frontmost_application_if("cursor") %>]
+          },
+          {
+            "description": "H_LeftArrow",
+            "type": "basic",
+            "from": <%= from("h", ["caps_lock"]) %>,
+            "to": <%= to([["left_arrow"]]) %>,
+            "conditions": [<%= frontmost_application_if("cursor") %>]
+          },
+          {
+            "description": "i_PageDown",
+            "type": "basic",
+            "from": <%= from("i", ["caps_lock"]) %>,
+            "to": <%= to([["down_arrow", ["fn"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "O(オー)_PageUp",
+            "type": "basic",
+            "from": <%= from("o", ["caps_lock"]) %>,
+            "to": <%= to([["up_arrow", ["fn"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "N_HeadRowCursol",
+            "type": "basic",
+            "from": <%= from("n", ["caps_lock"]) %>,
+            "to": <%= to([["up_arrow", ["right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "M_EndRowCursol",
+            "type": "basic",
+            "from": <%= from("m", ["caps_lock"]) %>,
+            "to": <%= to([["down_arrow", ["right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "Slash_Zenmode",
+            "type": "basic",
+            "from": <%= from("slash", ["caps_lock"]) %>,
+            "to": <%= to([["u", ["right_control", "right_alt"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "X_エディター内のシンボルへ移動",
+            "type": "basic",
+            "from": <%= from("x", ["caps_lock"]) %>,
+            "to": <%= to([["o", ["left_shift", "right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "S_定義に移動",
+            "type": "basic",
+            "from": <%= from("s", ["caps_lock"]) %>,
+            "to": <%= to([["2", ["left_shift", "right_option"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "Y_アウトラインビューにフォーカスを置く",
+            "type": "basic",
+            "from": <%= from("y", ["caps_lock"]) %>,
+            "to": <%= to([["6", ["left_shift", "right_option"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "A_CurrentRowHeadCursol",
+            "type": "basic",
+            "from": <%= from("a", ["caps_lock"]) %>,
+            "to": <%= to([["left_arrow", ["left_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "semicolon_CurrentRowCursolEnd_cursor上で、直接 Ctrl + ;で設定済み",
+            "type": "basic",
+            "from": <%= from("semicolon", ["caps_lock"]) %>,
+            "to": <%= to([["semicolon", ["left_control"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "closebracket_editor.action.jumpToBracket",
+            "type": "basic",
+            "from": <%= from("close_bracket", ["caps_lock"]) %>,
+            "to": <%= to([["m", ["right_option", "right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "B_BookmarkSet",
+            "type": "basic",
+            "from": <%= from("b", ["caps_lock"]) %>,
+            "to": <%= to([["k", ["right_option", "right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "V_NextBookmark",
+            "type": "basic",
+            "from": <%= from("v", ["caps_lock"]) %>,
+            "to": <%= to([["l", ["right_option", "right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "T_ToggleSidebarOnOff",
+            "type": "basic",
+            "from": <%= from("t", ["caps_lock"]) %>,
+            "to": <%= to([["t", ["right_control", "left_shift"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "R_Row2SplitEditerScreen",
+            "type": "basic",
+            "from": <%= from("r", ["caps_lock"]) %>,
+            "to": <%= to([["2", ["right_option", "right_gui", "left_shift"]], ["d", ["right_alt"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "-(ハイフン)_3行のエディターレイアウト",
+            "type": "basic",
+            "from": <%= from("hyphen", ["caps_lock"]) %>,
+            "to": <%= to([["3", ["right_shift", "right_gui",]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "=(イコール)_3列のエディターレイアウト",
+            "type": "basic",
+            "from": <%= from("equal_sign", ["caps_lock"]) %>,
+            "to": <%= to([["4", ["right_shift", "right_gui",]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "D_workbench.action.moveEditorToNextGroup",
+            "type": "basic",
+            "from": <%= from("d", ["caps_lock"]) %>,
+            "to": <%= to([["d", ["right_alt"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "Quote_Single Column Editor Layout",
+            "type": "basic",
+            "from": <%= from("quote", ["caps_lock"]) %>,
+            "to": <%= to([["h", ["right_control", "left_shift"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "G_FileTabClose",
+            "type": "basic",
+            "from": <%= from("g", ["caps_lock"]) %>,
+            "to": <%= to([["w", ["right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "W_フォルダービューにフォーカスを置く",
+            "type": "basic",
+            "from": <%= from("w", ["caps_lock"]) %>,
+            "to": <%= to([["p", ["right_control", "right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "Comma_LatestTabToggle",
+            "type": "basic",
+            "from": <%= from("comma", ["caps_lock"]) %>,
+            "to": <%= to([["tab", ["left_control"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "Period_NextTab",
+            "type": "basic",
+            "from": <%= from("period", ["caps_lock"]) %>,
+            "to": <%= to([["tab", ["left_control", "left_shift"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "E_セカンダリサイドバー切替",
+            "type": "basic",
+            "from": <%= from("e", ["caps_lock"]) %>,
+            "to": <%= to([["b", ["right_option", "right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "U_FocusNeighboringGroup",
+            "type": "basic",
+            "from": <%= from("u", ["caps_lock"]) %>,
+            "to": <%= to([["i", ["right_gui", "right_alt"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "P_選択範囲拡張",
+            "type": "basic",
+            "from": <%= from("p", ["caps_lock"]) %>,
+            "to": <%= to([["3", ["right_shift", "right_alt"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "Q_選択範囲縮小",
+            "type": "basic",
+            "from": <%= from("q", ["caps_lock"]) %>,
+            "to": <%= to([["4", ["right_shift", "right_alt"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "0ゼロ_エディターレイアウト2x2",
+            "type": "basic",
+            "from": <%= from("0", ["caps_lock"]) %>,
+            "to": <%= to([["9", ["left_gui", "left_shift"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "C_chat",
+            "type": "basic",
+            "from": <%= from("c", ["caps_lock"]) %>,
+            "to": <%= to([["l", ["right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "Z_Generate",
+            "type": "basic",
+            "from": <%= from("z", ["caps_lock"]) %>,
+            "to": <%= to([["k", ["right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "RightOption + J_カレント行から最終行まで選択",
+            "type": "basic",
+            "from": <%= from("j", ["right_option"], ["caps_lock"]) %>,
+            "to": <%= to([["down_arrow", ["left_shift", "right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "RightOption + C_chat",
+            "type": "basic",
+            "from": <%= from("c", ["right_option"], ["caps_lock"]) %>,
+            "to": <%= to([["l", ["right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "RightOption + G_generate",
+            "type": "basic",
+            "from": <%= from("g", ["right_option"], ["caps_lock"]) %>,
+            "to": <%= to([["k", ["right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "RightOption + X_エディター内のシンボルへ移動",
+            "type": "basic",
+            "from": <%= from("x", ["right_option"], ["caps_lock"]) %>,
+            "to": <%= to([["o", ["left_shift", "right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "RightOption + S_定義に移動",
+            "type": "basic",
+            "from": <%= from("s", ["right_option"], ["caps_lock"]) %>,
+            "to": <%= to([["2", ["left_shift", "right_option"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "LeftOption + Y_アウトラインビューにフォーカスを置く",
+            "type": "basic",
+            "from": <%= from("y", ["left_option"], ["caps_lock"]) %>,
+            "to": <%= to([["6", ["left_shift", "right_option"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "RightOption + K_折りたたみの切り替え",
+            "type": "basic",
+            "from": <%= from("k", ["right_option"], ["caps_lock"]) %>,
+            "to": <%= to([["0", ["left_control", "right_shift"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "LeftCommand + A_CurrentRowHeadCursol",
+            "type": "basic",
+            "from": <%= from("a", ["left_control"], ["caps_lock"]) %>,
+            "to": <%= to([["left_arrow", ["left_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "LeftCommand + semicolon_CurrentRowCursolEnd_cursor上で、直接 Ctrl + ;で設定済み",
+            "type": "basic",
+            "from": <%= from("semicolon", ["left_control"], ["caps_lock"]) %>,
+            "to": <%= to([["semicolon", ["left_control"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "RightCommand + quote_閉じたエディターを再度開く",
+            "type": "basic",
+            "from": <%= from("quote", ["right_gui"], ["caps_lock"]) %>,
+            "to": <%= to([["t", ["right_gui", "right_shift"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "RightCommand + B_ビルドタスクの実行",
+            "type": "basic",
+            "from": <%= from("b", ["right_gui"], ["caps_lock"]) %>,
+            "to": <%= to([["b", ["right_shift", "right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "RightOption + L_OpenwithLiveServer",
+            "type": "basic",
+            "from": <%= from("l", ["right_option"], ["caps_lock"]) %>,
+            "to": <%= to([["4", ["right_option", "right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "RightOption + B_デバッグの開始",
+            "type": "basic",
+            "from": <%= from("b", ["right_option"], ["caps_lock"]) %>,
+            "to": <%= to([["5", ["right_shift", "right_option" ]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "LeftOption + W_再起動",
+            "type": "basic",
+            "from": <%= from("w", ["left_option"], ["caps_lock"]) %>,
+            "to": <%= to([["f5", ["right_shift", "right_gui" ]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "LeftOption + M_BookmarkSet",
+            "type": "basic",
+            "from": <%= from("m", ["left_option"], ["caps_lock"]) %>,
+            "to": <%= to([["k", ["right_option", "right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "RightOption + M_NextBookmark",
+            "type": "basic",
+            "from": <%= from("m", ["right_option"], ["caps_lock"]) %>,
+            "to": <%= to([["l", ["right_option", "right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "LeftOption + N_editor.action.jumpToBracket",
+            "type": "basic",
+            "from": <%= from("n", ["left_option"], ["caps_lock"]) %>,
+            "to": <%= to([["m", ["right_option", "right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "LeftCommand + N_HeadRowCursol",
+            "type": "basic",
+            "from": <%= from("n", ["left_control"], ["caps_lock"]) %>,
+            "to": <%= to([["up_arrow", ["right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "LeftCommand + M_EndRowCursol",
+            "type": "basic",
+            "from": <%= from("m", ["left_control"], ["caps_lock"]) %>,
+            "to": <%= to([["down_arrow", ["right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "LeftCommand + CloseBracket_Outdent",
+            "type": "basic",
+            "from": <%= from("close_bracket", ["left_control"], ["caps_lock"]) %>,
+            "to": <%= to([["tab", ["left_shift"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "RightCommand + Slash_SelectAllSameWord",
+            "type": "basic",
+            "from": <%= from("slash", ["right_gui"], ["caps_lock"]) %>,
+            "to": <%= to([["3", ["right_gui","right_option"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "RightAlt + B_DebugStart ",
+            "type": "basic",
+            "from": <%= from("b", ["right_alt"], ["caps_lock"]) %>,
+            "to": <%= to([["f5", ["right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "LeftAlt + I_Terminal Focus ",
+            "type": "basic",
+            "from": <%= from("i", ["left_alt"], ["caps_lock"]) %>,
+            "to": <%= to([["4", ["left_control", "left_alt"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "RightCommand + Comma_Terminal Panel Max Toggle ",
+            "type": "basic",
+            "from": <%= from("comma", ["right_gui"], ["caps_lock"]) %>,
+            "to": <%= to([["o", ["left_control", "left_alt"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "LeftAlt + U_Terminal Clear ",
+            "type": "basic",
+            "from": <%= from("u", ["left_alt"], ["caps_lock"]) %>,
+            "to": <%= to([["2", ["right_control", "left_alt"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "LeftAlt + B_prettifyコード整形 ",
+            "type": "basic",
+            "from": <%= from("b", ["left_alt"], ["caps_lock"]) %>,
+            "to": <%= to([["f", ["right_alt", "left_shift"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "LeftAlt + Comma_copyFilePath_sidebarのコピーしたいファイル上で上記のショットカットキーを押す、本文の側でショットカットキーを押してコピーできない",
+            "type": "basic",
+            "from": <%= from("comma", ["left_alt"], ["caps_lock"]) %>,
+            "to": <%= to([["f9", ["right_control", "right_alt"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "RightAlt + H_FolderInSearch",
+            "type": "basic",
+            "from": <%= from("h", ["right_alt"], ["caps_lock"]) %>,
+            "to": <%= to([["f", ["right_gui", "right_shift"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "RightAlt + T_workbench.action.closePanel",
+            "type": "basic",
+            "from": <%= from("t", ["right_alt"], ["caps_lock"]) %>,
+            "to": <%= to([["7", ["right_gui", "right_alt"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "RightAlt + A_CursorNewWindows",
+            "type": "basic",
+            "from": <%= from("a", ["right_alt"], ["caps_lock"]) %>,
+            "to": <%= to([["n", ["right_shift", "right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "LeftAlt + A_CursorNewFolderCreate",
+            "type": "basic",
+            "from": <%= from("a", ["left_alt"], ["caps_lock"]) %>,
+            "to": <%= to([["2", ["right_alt", "right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "LeftAlt + F_CursorNewFileCreate",
+            "type": "basic",
+            "from": <%= from("f", ["left_alt"], ["caps_lock"]) %>,
+            "to": <%= to([["1", ["right_alt", "right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "RightAlt + Slash_Zenmode",
+            "type": "basic",
+            "from": <%= from("slash", ["right_alt"], ["caps_lock"]) %>,
+            "to": <%= to([["u", ["right_control", "right_alt"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "RightAlt + semicolon_SplitTerminal",
+            "type": "basic",
+            "from": <%= from("semicolon", ["right_alt"], ["caps_lock"]) %>,
+            "to": <%= to([["f4", ["left_alt", "right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "LeftCommand + OpenBracket_Workbench.action.quickopen",
+            "type": "basic",
+            "from": <%= from("open_bracket", ["left_control"], ["caps_lock"]) %>,
+            "to": <%= to([["f7", ["right_control", "right_alt"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "LeftCommand + T_ToggleSidebarOnOff",
+            "type": "basic",
+            "from": <%= from("t", ["left_control"], ["caps_lock"]) %>,
+            "to": <%= to([["t", ["right_control", "left_shift"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "LeftAlt + R_Replace",
+            "type": "basic",
+            "from": <%= from("r", ["left_alt"], ["caps_lock"]) %>,
+            "to": <%= to([["3", ["right_control", "left_shift"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "LeftCommand + O(オー)_Row2SplitEditerScreen",
+            "type": "basic",
+            "from": <%= from("o", ["left_control"], ["caps_lock"]) %>,
+            "to": <%= to([["2", ["right_option", "right_gui", "left_shift"]], ["d", ["right_alt"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "LeftCommand + 0(ゼロ)_Column2SplitEditerScreen",
+            "type": "basic",
+            "from": <%= from("0", ["left_control"], ["caps_lock"]) %>,
+            "to": <%= to([["o", ["left_control", "left_shift"]], ["i", ["right_gui", "right_alt"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "LeftCommand + 9_右上2行のエディターレイアウト",
+            "type": "basic",
+            "from": <%= from("9", ["left_control"], ["caps_lock"]) %>,
+            "to": <%= to([["6", ["left_gui", "left_shift"]], ["d", ["left_option"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "LeftOption + C_Change Live Server workspace",
+            "type": "basic",
+            "from": <%= from("c", ["left_option"], ["caps_lock"]) %>,
+            "to": <%= to([["7", ["left_gui", "left_shift"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "LeftOption + Z_エディターレイアウト2x2",
+            "type": "basic",
+            "from": <%= from("z", ["left_option"], ["caps_lock"]) %>,
+            "to": <%= to([["9", ["left_gui", "left_shift"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "LeftCommand + -(ハイフン)_3行のエディターレイアウト",
+            "type": "basic",
+            "from": <%= from("hyphen", ["left_control"], ["caps_lock"]) %>,
+            "to": <%= to([["3", ["right_shift", "right_gui",]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "LeftCommand + =(イコール)_3列のエディターレイアウト",
+            "type": "basic",
+            "from": <%= from("equal_sign", ["left_control"], ["caps_lock"]) %>,
+            "to": <%= to([["4", ["right_shift", "right_gui",]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "LeftOption + E_前のエディターグループにフォーカス",
+            "type": "basic",
+            "from": <%= from("e", ["left_option"], ["caps_lock"]) %>,
+            "to": <%= to([["5", ["right_shift", "right_gui",]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "LeftCommand + Z_Insert Line Below",
+            "type": "basic",
+            "from": <%= from("z", ["left_control"], ["caps_lock"]) %>,
+            "to": <%= to([["return_or_enter", ["right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "RightAlt + Z_Insert Line Above",
+            "type": "basic",
+            "from": <%= from("z", ["right_alt"], ["caps_lock"]) %>,
+            "to": <%= to([["return_or_enter", ["right_gui", "left_shift"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "RightCommand + O_SameWordExpandSelection",
+            "type": "basic",
+            "from": <%= from("o", ["right_gui"], ["caps_lock"]) %>,
+            "to": <%= to([["0", ["right_gui", "right_alt"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "RightCommand + I_FocusNeighboringGroup",
+            "type": "basic",
+            "from": <%= from("i", ["right_gui"], ["any"]) %>,
+            "to": <%= to([["i", ["right_gui", "right_alt"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "LeftCommand + Quote_Single Column Editor Layout",
+            "type": "basic",
+            "from": <%= from("quote", ["left_control"], ["caps_lock"]) %>,
+            "to": <%= to([["h", ["right_control", "left_shift"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "RightCommand + H_フォルダービューにフォーカスを置く",
+            "type": "basic",
+            "from": <%= from("h", ["right_gui"], ["caps_lock"]) %>,
+            "to": <%= to([["p", ["right_control", "right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "RightOption + Y_アクティビティバ切替",
+            "type": "basic",
+            "from": <%= from("y", ["right_option"], ["caps_lock"]) %>,
+            "to": <%= to([["t", ["right_shift", "right_alt"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "LeftOption + T_セカンダリサイドバー切替",
+            "type": "basic",
+            "from": <%= from("t", ["left_option"], ["caps_lock"]) %>,
+            "to": <%= to([["b", ["right_option", "right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "LeftCommand + P_選択範囲拡張",
+            "type": "basic",
+            "from": <%= from("p", ["left_control"], ["caps_lock"]) %>,
+            "to": <%= to([["3", ["right_shift", "right_alt"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "RightCommand + Q_選択範囲縮小",
+            "type": "basic",
+            "from": <%= from("q", ["right_gui"], ["caps_lock"]) %>,
+            "to": <%= to([["4", ["right_shift", "right_alt"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "RightOption + R_エディターを右のグループに分割",
+            "type": "basic",
+            "from": <%= from("r", ["right_option"], ["caps_lock"]) %>,
+            "to": <%= to([["2", ["right_shift","right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "Fn + U_WindowLeftUp",
+            "type": "basic",
+            "from": <%= from("u", ["right_control"], ["caps_lock"]) %>,
+            "to": <%= to([["6", "right_alt"]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+              "description": "Fn + J_WindowLeftDown",
+              "type": "basic",
+              "from": <%= from("j", ["right_control"], ["caps_lock"]) %>,
+              "to": <%= to([["8", "right_alt"]]) %>,
+              "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+              "description": "Fn + I_WindowRightUp",
+              "type": "basic",
+              "from": <%= from("i", ["right_control"], ["caps_lock"]) %>,
+              "to": <%= to([["7", "right_alt"]]) %>,
+              "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+              "description": "Fn + K_WindowRightDown",
+              "type": "basic",
+              "from": <%= from("k", ["right_control"], ["caps_lock"]) %>,
+              "to": <%= to([["9", "right_alt"]]) %>,
+              "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+              "description": "Fn + G_WindowLeftOneThird",
+              "type": "basic",
+              "from": <%= from("g", ["right_control"], ["caps_lock"]) %>,
+              "to": <%= to([["d", ["right_control", "right_alt"]]]) %>,
+              "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+              "description": "Fn + Quote_WindowRightOneThird",
+              "type": "basic",
+              "from": <%= from("quote", ["right_control"], ["caps_lock"]) %>,
+              "to": <%= to([["g", ["right_control", "right_alt"]]]) %>,
+              "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+              "description": "Fn + Y_WindowLeftTwo-thirds",
+              "type": "basic",
+              "from": <%= from("y", ["right_control"], ["caps_lock"]) %>,
+              "to": <%= to([["e", ["right_control", "right_alt"]]]) %>,
+              "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+              "description": "Fn + O_WindowRightTwo-thirds",
+              "type": "basic",
+              "from": <%= from("o", ["right_control"], ["caps_lock"]) %>,
+              "to": <%= to([["t", ["right_control", "right_alt"]]]) %>,
+              "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+              "description": "Fn + Comma_WindowCenter",
+              "type": "basic",
+              "from": <%= from("comma", ["right_control"], ["caps_lock"]) %>,
+              "to": <%= to([["c", ["right_control", "right_alt"]]]) %>,
+              "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "RightCommand + Period_MaxWindow",
+            "type": "basic",
+            "from": <%= from("period", ["right_gui"], ["caps_lock"]) %>,
+            "to": <%= to([["f", ["right_control", "right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+              "description": "Fn + N_WindowUP",
+              "type": "basic",
+              "from": <%= from("n", ["right_control"], ["caps_lock"]) %>,
+              "to": <%= to([["4", ["left_alt"]]]) %>,
+              "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+              "description": "Fn + M_WindowDown",
+              "type": "basic",
+              "from": <%= from("m", ["right_control"], ["caps_lock"]) %>,
+              "to": <%= to([["5", ["left_alt"]]]) %>,
+              "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "Fn + L_RightHalfWindowMove",
+            "type": "basic",
+            "from": <%= from("l", ["right_control"], ["caps_lock"]) %>,
+            "to": <%= to([["3", ["right_alt"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+          {
+            "description": "Fn + H_LeftWindowMove",
+            "type": "basic",
+            "from": <%= from("h", ["right_control"], ["caps_lock"]) %>,
+            "to": <%= to([["2", ["right_alt"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("cursor") %> ]
+          },
+        {
+          "description": "日本語モード:Openbracket_OpenClosebracket",
+          "type": "basic",
+           "from": {
+            "key_code": "open_bracket",
+            "modifiers": {
+              "optional": [
+                "caps_lock"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "open_bracket"
+            },
+            {
+              "key_code": "close_bracket"
+            },
+            {
+              "key_code": "left_arrow"
+            }
+          ],
+        "conditions": [
+          {
+            "type": "input_source_if",
+            "input_sources": [
+              { "language": "ja" }
+            ]
+          },
+          {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com.todesktop.230313mzl4w4u92$"
+              ]
+          }
+      ]
+    },
+    {
+      "description": "LeftControl_Rename",
+      "type": "basic",
+      "from": {
+        "apple_vendor_top_case_key_code":"keyboard_fn"
+      },
+      "to": [
+        {
+          "key_code": "return_or_enter"
+        }
+      ],
+      "conditions": [
+        {
+          "type": "frontmost_application_if",
+          "bundle_identifiers": [
+              "^com.todesktop.230313mzl4w4u92$"
+          ]
+        }
+      ]
+    },
+    {
+      "description": "LeftShift + spacebar_エディターでファイルを開く",
+      "type": "basic",
+      "from": {
+            "key_code": "spacebar",
+            "modifiers": { "mandatory": [ "left_shift" ] }
+      },
+      "to": [
+        {
+          "pointing_button": "button1",
+          "modifiers": [
+            "left_gui"
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "type": "frontmost_application_if",
+          "bundle_identifiers": [
+              "^com.todesktop.230313mzl4w4u92$"
+          ]
+        }
+      ]
+    }
+  ]
+  }
+  ]
+}

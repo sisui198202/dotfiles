@@ -1,0 +1,537 @@
+{
+    "title": "FrontmostIfExcel_summary2",
+    "rules": [
+      {
+        "description": "FrontmostIfExcel_summary2",
+        "manipulators": [
+          {
+            "description": "オウ_選択範囲に合わせて拡大/縮小",
+            "type": "basic",
+            "from": <%= from("o", ["caps_lock"]) %>,
+            "to": <%= to([["4", ["right_shift", "right_gui"]]]) %>,
+            "conditions": [<%= frontmost_application_if("excel") %>]
+          },
+          {
+            "description": "i_ズームを100%に設定",
+            "type": "basic",
+            "from": <%= from("i",["caps_lock"]) %>,
+            "to": <%= to([["5", ["right_shift", "right_gui"]]]) %>,
+            "conditions": [<%= frontmost_application_if("excel") %>]
+          },
+          {
+            "description": "LeftOption  + E_非表示",
+            "type": "basic",
+            "from": <%= from("e", ["left_option"]) %>,
+            "to": <%= to([["0", ["left_control"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("excel") %> ]
+          },
+          {
+            "description": "RightOption  + E_再表示",
+            "type": "basic",
+            "from": <%= from("e", ["right_option"]) %>,
+            "to": <%= to([["0", ["left_shift", "left_control"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("excel") %> ]
+          },
+          {
+            "description": "LeftCommand  + Z_塗りつぶし色",
+            "type": "basic",
+            "from": <%= from("z", ["left_control"]) %>,
+            "to": <%= to([["2", ["left_shift", "left_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("excel") %> ]
+          },
+          {
+            "description": "RightCommand  + i_セルの書式設定",
+            "type": "basic",
+            "from": <%= from("i", ["right_gui"]) %>,
+            "to": <%= to([["3", ["left_shift", "left_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("excel") %> ]
+          },
+          {
+            "description": "LeftCommand + A_最初の列へカーソル",
+            "type": "basic",
+            "from": <%= from("a", ["left_control"]) %>,
+            "to": <%= to([["left_arrow", ["fn"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("excel") %> ]
+          },
+          {
+            "description": "LeftCommand + ;(セミコロン)_最終列へカーソル",
+            "type": "basic",
+            "from": <%= from("semicolon", ["left_control"]) %>,
+            "to": <%= to([["right_arrow", ["fn"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("excel") %> ]
+          },
+          {
+            "description": "LeftCommand + N_HeadRowCursol",
+            "type": "basic",
+            "from": <%= from("n", ["left_control"]) %>,
+            "to": <%= to([["left_arrow", ["fn", "right_control"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("excel") %> ]
+          },
+          {
+            "description": "LeftCommand + M_EndRowCursol",
+            "type": "basic",
+            "from": <%= from("m", ["left_control"]) %>,
+            "to": <%= to([["right_arrow", ["fn", "right_control"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("excel") %> ]
+          },
+          {
+            "description": "LeftOption + U_最終行カーソル移動-Ctrl + ↓",
+            "type": "basic",
+            "from": <%= from("u", ["left_option"]) %>,
+            "to": <%= to([["down_arrow", ["left_shift", "left_control"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("excel") %> ]
+          },
+          {
+            "description": "LeftOption + A_新規シート挿入",
+            "type": "basic",
+            "from": <%= from("a", ["left_option"]) %>,
+            "to": <%= to([["f11", ["right_shift"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("excel") %> ]
+          },
+          {
+            "description": "LeftOption + F_連続データ作成",
+            "type": "basic",
+            "from": <%= from("f", ["left_option"]) %>,
+            "to": <%= to([["0", ["right_option", "right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("excel") %> ]
+          },
+          {
+            "description": "RightOption + Q_すべてのウィンドウを並び替え",
+            "type": "basic",
+            "from": <%= from("q", ["right_option"]) %>,
+            "to": <%= to([["1", ["right_option", "right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("excel") %> ]
+          },
+          {
+            "description": "RightOption + K_繰り返し",
+            "type": "basic",
+            "from": <%= from("k", ["right_option"]) %>,
+            "to": <%= to([["f4"]]) %>,
+            "conditions": [ <%= frontmost_application_if("excel") %> ]
+          },
+          {
+            "description": "RightOption + R_行の高さ変更",
+            "type": "basic",
+            "from": <%= from("r", ["right_option"]) %>,
+            "to": <%= to([["2", ["right_option", "right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("excel") %> ]
+          },
+          {
+            "description": "LeftOption + C_列幅変更",
+            "type": "basic",
+            "from": <%= from("c", ["left_option"]) %>,
+            "to": <%= to([["3", ["right_option", "right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("excel") %> ]
+          },
+          {
+            "description": "RightOption + A_カレントウィンドウを複製",
+            "type": "basic",
+            "from": <%= from("a", ["right_option"]) %>,
+            "to": <%= to([["4", ["right_option", "right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("excel") %> ]
+          },
+          {
+            "description": "LeftCommand + Y_シート削除",
+            "type": "basic",
+            "from": <%= from("y", ["left_control"]) %>,
+            "to": <%= to([["7", ["right_option", "right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("excel") %> ]
+          },
+          {
+            "description": "LeftOption + R_Replace",
+            "type": "basic",
+            "from": <%= from("r", ["left_alt"], ["caps_lock"]) %>,
+            "to": <%= to([["h", ["right_gui", "left_shift"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("excel") %> ]
+          },
+          {
+            "description": "RightCommand + U_カレント列選択",
+            "type": "basic",
+            "from": <%= from("u", ["right_gui"]) %>,
+            "to": <%= to([["spacebar", ["left_control"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("excel") %> ]
+          },
+          {
+            "description": "RightCommand + J_カレント行選択",
+            "type": "basic",
+            "from": <%= from("j", ["right_gui"]) %>,
+            "to": <%= to([["spacebar", ["left_shift"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("excel") %> ]
+          },
+          {
+            "description": "LeftOption + D_カレント行列削除",
+            "type": "basic",
+            "from": <%= from("d", ["left_option"]) %>,
+            "to": <%= to([["hyphen", ["right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("excel") %> ]
+          },
+          {
+            "description": "LeftCommand + T_カレント行/列追加",
+            "type": "basic",
+            "from": <%= from("t", ["left_control"]) %>,
+            "to": <%= to([["equal_sign", ["right_gui", "right_shift"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("excel") %> ]
+          },
+          {
+            "description": "RightOption + J_カレント列から最終列まで選択",
+            "type": "basic",
+            "from": <%= from("j", ["right_option"]) %>,
+            "to": <%= to([["right_arrow", ["left_shift", "left_control"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("excel") %> ]
+          },
+          {
+            "description": "RightCommand + L_PreviousTab",
+            "type": "basic",
+            "from": <%= from("l", ["right_gui"]) %>,
+            "to": <%= to([["left_arrow", ["left_alt"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("excel") %> ]
+          },
+          {
+            "description": "RightCommand + semicolon_NextTab",
+            "type": "basic",
+            "from": <%= from("semicolon", ["right_gui"]) %>,
+            "to": <%= to([["right_arrow", ["left_alt"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("excel") %> ]
+          },
+          {
+            "description": "LeftShift + RightOption_形式を選択して貼り付け",
+            "type": "basic",
+            "from": <%= from("right_option", ["left_shift"]) %>,
+            "to": <%= to([["v", ["left_option", "right_control"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("excel") %> ]
+          },
+          {
+            "description": "RightOption + X_VBE切替",
+            "type": "basic",
+            "from": <%= from("x", ["right_alt"], ["caps_lock"]) %>,
+            "to": <%= to([["f11", ["right_alt"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("excel") %> ]
+          },
+          {
+            "description": "Fn + U_WindowLeftUp",
+            "type": "basic",
+            "from": <%= from("u", ["right_control"], ["caps_lock"]) %>,
+            "to": <%= to([["6", "right_alt"]]) %>,
+            "conditions": [ <%= frontmost_application_if("excel") %> ]
+          },
+          {
+              "description": "Fn + J_WindowLeftDown",
+              "type": "basic",
+              "from": <%= from("j", ["right_control"], ["caps_lock"]) %>,
+              "to": <%= to([["8", "right_alt"]]) %>,
+              "conditions": [ <%= frontmost_application_if("excel") %> ]
+          },
+          {
+              "description": "Fn + I_WindowRightUp",
+              "type": "basic",
+              "from": <%= from("i", ["right_control"], ["caps_lock"]) %>,
+              "to": <%= to([["7", "right_alt"]]) %>,
+              "conditions": [ <%= frontmost_application_if("excel") %> ]
+          },
+          {
+              "description": "Fn + K_WindowRightDown",
+              "type": "basic",
+              "from": <%= from("k", ["right_control"], ["caps_lock"]) %>,
+              "to": <%= to([["9", "right_alt"]]) %>,
+              "conditions": [ <%= frontmost_application_if("excel") %> ]
+          },
+          {
+              "description": "Fn + G_WindowLeftOneThird",
+              "type": "basic",
+              "from": <%= from("g", ["right_control"], ["caps_lock"]) %>,
+              "to": <%= to([["d", ["right_control", "right_alt"]]]) %>,
+              "conditions": [ <%= frontmost_application_if("excel") %> ]
+          },
+          {
+              "description": "Fn + Quote_WindowRightOneThird",
+              "type": "basic",
+              "from": <%= from("quote", ["right_control"], ["caps_lock"]) %>,
+              "to": <%= to([["g", ["right_control", "right_alt"]]]) %>,
+              "conditions": [ <%= frontmost_application_if("excel") %> ]
+          },
+          {
+              "description": "Fn + Y_WindowLeftTwo-thirds",
+              "type": "basic",
+              "from": <%= from("y", ["right_control"], ["caps_lock"]) %>,
+              "to": <%= to([["e", ["right_control", "right_alt"]]]) %>,
+              "conditions": [ <%= frontmost_application_if("excel") %> ]
+          },
+          {
+              "description": "Fn + O_WindowRightTwo-thirds",
+              "type": "basic",
+              "from": <%= from("o", ["right_control"], ["caps_lock"]) %>,
+              "to": <%= to([["t", ["right_control", "right_alt"]]]) %>,
+              "conditions": [ <%= frontmost_application_if("excel") %> ]
+          },
+          {
+              "description": "Fn + Comma_WindowCenter",
+              "type": "basic",
+              "from": <%= from("comma", ["right_control"], ["caps_lock"]) %>,
+              "to": <%= to([["c", ["right_control", "right_alt"]]]) %>,
+              "conditions": [ <%= frontmost_application_if("excel") %> ]
+          },
+          {
+            "description": "RightCommand + Period_MaxWindow",
+            "type": "basic",
+            "from": <%= from("period", ["right_gui"], ["caps_lock"]) %>,
+            "to": <%= to([["f", ["right_control", "right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("excel") %> ]
+          },
+          {
+              "description": "Fn + N_WindowUP",
+              "type": "basic",
+              "from": <%= from("n", ["right_control"], ["caps_lock"]) %>,
+              "to": <%= to([["4", ["left_alt"]]]) %>,
+              "conditions": [ <%= frontmost_application_if("excel") %> ]
+          },
+          {
+              "description": "Fn + M_WindowDown",
+              "type": "basic",
+              "from": <%= from("m", ["right_control"], ["caps_lock"]) %>,
+              "to": <%= to([["5", ["left_alt"]]]) %>,
+              "conditions": [ <%= frontmost_application_if("excel") %> ]
+          },
+          {
+            "description": "Fn + L_RightHalfWindowMove",
+            "type": "basic",
+            "from": <%= from("l", ["right_control"], ["caps_lock"]) %>,
+            "to": <%= to([["3", ["right_alt"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("excel") %> ]
+          },
+          {
+            "description": "Fn + H_LeftWindowMove",
+            "type": "basic",
+            "from": <%= from("h", ["right_control"], ["caps_lock"]) %>,
+            "to": <%= to([["2", ["right_alt"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("excel") %> ]
+          },
+          {
+            "description": "RightAlt_Paste",
+            "type": "basic",
+            "from": {
+              "key_code": "right_alt",
+              "modifiers": {
+                "optional": [
+                  "caps_lock"
+                ]
+              }
+            },
+            "to": [
+              {
+                "key_code": "right_alt"
+              }
+            ],
+            "to_if_alone": [
+              {
+                "key_code": "v",
+                "modifiers": "left_gui"
+              }
+            ],
+            "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.microsoft\\.Excel$"
+              ]
+            }
+          ]
+        },
+        {
+          "description": "Leftoption+Openbracket_クイックアクセスツールバーの画像挿入クリック",
+          "type": "basic",
+          "from": {
+            "key_code": "open_bracket",
+            "modifiers": {
+              "mandatory": [
+                "left_option"
+              ],
+              "optional": [
+                "caps_lock"
+              ]
+            }
+          },
+          "to": [
+            {
+              "software_function": {
+                "set_mouse_cursor_position": {
+                  "x": "220",
+                  "y": "35",
+                  "screen": 0
+                }
+              }
+            },
+            { "pointing_button": "button1" }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+              "^com\\.microsoft\\.Excel$"
+              ]
+            }
+        ]
+    },
+    {
+      "description": "LeftContorl_CellEdit_Spacebarだと、半角スペース入力が効かなくなる、LeftControlが良い",
+      "type": "basic",
+      "from": {
+        "key_code": "fn",
+        "modifiers": {
+          "optional": [
+            "caps_lock"
+          ]
+        }
+      },
+      "to": [
+        {
+          "key_code": "f2"
+        }
+      ],
+      "conditions": [
+        {
+          "type": "frontmost_application_if",
+          "bundle_identifiers": [
+            "^com\\.microsoft\\.Excel$"
+          ]
+        }
+      ]
+    },
+    {
+      "description": "効かない-RightOption + W_CopyToEnd",
+      "type": "basic",
+      "from": <%= from("w", ["right_option"]) %>,
+      "to": <%= to([["b", ["right_shift", "left_control"]]]) %>,
+      "conditions": [ <%= frontmost_application_if("excel") %> ]
+    }
+    ]
+  },
+  {
+    "description": "FrontmostIfExcelVBE_summary(ExcelVBE)",
+    "manipulators": [
+      {
+        "description": "LeftAlt + N_HeadRowCursol",
+        "type": "basic",
+        "from": <%= from("n", ["left_alt"]) %>,
+        "to": <%= to([["left_arrow", ["fn", "right_gui"]]]) %>,
+        "conditions": [ <%= frontmost_application_if("excel") %> ]
+      },
+      {
+        "description": "LeftAlt + M_EndRowCursol",
+        "type": "basic",
+        "from": <%= from("m", ["left_alt"]) %>,
+        "to": <%= to([["right_arrow", ["fn", "right_gui"]]]) %>,
+        "conditions": [ <%= frontmost_application_if("excel") %> ]
+      },
+      {
+        "description": "LeftOption + period_ProcedureNextMove",
+        "type": "basic",
+        "from": <%= from("period", ["left_option"]) %>,
+        "to": <%= to([["down_arrow", ["right_gui"]]]) %>,
+        "conditions": [ <%= frontmost_application_if("excel") %> ]
+      },
+      {
+        "description": "LeftOption + comma_ProcedurePreviousMove",
+        "type": "basic",
+        "from": <%= from("comma", ["left_option"]) %>,
+        "to": <%= to([["up_arrow", ["right_gui"]]]) %>,
+        "conditions": [ <%= frontmost_application_if("excel") %> ]
+      },
+      {
+        "description": "LeftCommand + OpenBracket_モジュール間移動",
+        "type": "basic",
+        "from": <%= from("open_bracket", ["left_control"]) %>,
+        "to": <%= to([["f6", ["left_control"]]]) %>,
+        "conditions": [ <%= frontmost_application_if("excel") %> ]
+      },
+      {
+        "description": "LeftCommand + CloseBracket_unindent",
+        "type": "basic",
+        "from": <%= from("close_bracket", ["left_control"]) %>,
+        "to": <%= to([["tab", ["left_shift"]]]) %>,
+        "conditions": [ <%= frontmost_application_if("excel") %> ]
+      },
+      {
+        "description": "RightCommand + B_Build",
+        "type": "basic",
+        "from": <%= from("b", ["right_gui"]) %>,
+        "to": <%= to([["f5"]]) %>,
+        "conditions": [ <%= frontmost_application_if("excel") %> ]
+      },
+      {
+        "description": "RightAlt + C_VBE-Copy",
+        "type": "basic",
+        "from": <%= from("c", ["right_alt"], ["caps_lock"]) %>,
+        "to": <%= to([["c", "right_gui"]]) %>,
+        "conditions": [ <%= frontmost_application_if("excel") %> ]
+      },
+      {
+        "description": "RightAlt + V_VBE-Paste",
+        "type": "basic",
+        "from": <%= from("v", ["right_alt"], ["caps_lock"]) %>,
+        "to": <%= to([["v", "right_gui"]]) %>,
+        "conditions": [ <%= frontmost_application_if("excel") %> ]
+      },
+      {
+        "description": "F8_StepIn",
+        "type": "basic",
+        "from": <%= from("F8") %>,
+        "to": <%= to([["i", ["right_gui", "right_shift"]]]) %>,
+        "conditions": [ <%= frontmost_application_if("excel") %> ]
+      },
+      {
+        "description": "F9_StepOver",
+        "type": "basic",
+        "from": <%= from("f9") %>,
+        "to": <%= to([["o", ["right_gui", "left_shift"]]]) %>,
+        "conditions": [ <%= frontmost_application_if("excel") %> ]
+      },
+      {
+        "description": "F10_StepOut",
+        "type": "basic",
+        "from": <%= from("f10") %>,
+        "to": <%= to([["t", ["right_gui", "left_shift"]]]) %>,
+        "conditions": [ <%= frontmost_application_if("excel") %> ]
+      },
+      {
+        "description": "LeftCommand + P_BreakPointSet",
+        "type": "basic",
+        "from": <%= from("p", ["left_control"]) %>,
+        "to": <%= to([["t", ["right_gui"]]]) %>,
+        "conditions": [ <%= frontmost_application_if("excel") %> ]
+      },
+      {
+        "description": "LeftAlt + i_ImmediateWindow",
+        "type": "basic",
+        "from": <%= from("i", ["left_alt"]) %>,
+        "to": <%= to([["g", ["right_gui", "left_control"]]]) %>,
+        "conditions": [ <%= frontmost_application_if("excel") %> ]
+      },
+      {
+        "description": "RightOption + Z_VBE-FromExcelMouse",
+        "type": "basic",
+        "from": <%= from("z", ["right_alt"]) %>,
+        "to": [
+          {
+            "software_function": {
+              "set_mouse_cursor_position": {
+                "x": "20",
+                "y": "60",
+                "screen": 0
+              }
+            }
+          },
+          { "pointing_button": "button1" }
+        ],
+        "conditions": [
+          {
+            "type": "frontmost_application_if",
+            "bundle_identifiers": [
+              "^com\\.microsoft\\.Excel$"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  ]
+}

@@ -1,0 +1,350 @@
+{
+    "title": "FrontmostIfEagle_summary",
+    "rules": [
+      {
+        "description": "FrontmostIfEagle_summary",
+        "manipulators": [
+          {
+            "description": "J_DownArrow",
+            "type": "basic",
+            "from": <%= from("j",["caps_lock"]) %>,
+            "to": <%= to([["down_arrow"]]) %>,
+            "conditions": [ <%= frontmost_application_if("eagle") %> ]
+          },
+          {
+            "description": "K_UpArrow",
+            "type": "basic",
+            "from": <%= from("k",["caps_lock"]) %>,
+            "to": <%= to([["up_arrow"]]) %>,
+            "conditions": [ <%= frontmost_application_if("eagle") %> ]
+          },
+          {
+            "description": "N_HeadRowCursol",
+            "type": "basic",
+            "from": <%= from("n", ["caps_lock"]) %>,
+            "to": <%= to([["left_arrow", ["fn"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("eagle") %> ]
+          },
+          {
+            "description": "M_EndRowCursol",
+            "type": "basic",
+            "from": <%= from("m", ["caps_lock"]) %>,
+            "to": <%= to([["right_arrow", ["fn"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("eagle") %> ]
+          },
+          {
+            "description": "G_Escape",
+            "type": "basic",
+            "from": <%= from("g", ["caps_lock"]) %>,
+            "to": <%= to([["escape"]]) %>,
+            "conditions": [ <%= frontmost_application_if("eagle") %> ]
+          },
+          {
+            "description": "LeftCommand + G_Escape",
+            "type": "basic",
+            "from": <%= from("g", ["left_control"], ["caps_lock"]) %>,
+            "to": <%= to([["escape"]]) %>,
+            "conditions": [ <%= frontmost_application_if("eagle") %> ]
+          },
+          {
+            "description": "Quote_画像削除",
+            "type": "basic",
+            "from": <%= from("quote", ["caps_lock"]) %>,
+            "to": <%= to([["delete_or_backspace",["left_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("eagle") %> ]
+          },
+          {
+            "description": "Semicolon_画像タグを追加",
+            "type": "basic",
+            "from": <%= from("semicolon", ["caps_lock"]) %>,
+            "to": <%= to([["t",["left_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("eagle") %> ]
+          },
+          {
+            "description": "LeftCommand + Semicolon_画像タグを追加",
+            "type": "basic",
+            "from": <%= from("semicolon", ["left_control"], ["caps_lock"]) %>,
+            "to": <%= to([["t",["left_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("eagle") %> ]
+          },
+          {
+            "description": "LeftCommand + openbracket_すべて",
+            "type": "basic",
+            "from": <%= from("open_bracket", ["left_control"]) %>,
+            "to": <%= to([["1", ["right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("eagle") %> ]
+          },
+          {
+            "description": "openbracket_すべて",
+            "type": "basic",
+            "from": <%= from("open_bracket", ["caps_lock"]) %>,
+            "to": <%= to([["1", ["right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("eagle") %> ]
+          },
+          {
+            "description": "LeftOption + ,[カンマ]_パスをコピー",
+            "type": "basic",
+            "from": <%= from("comma", ["left_option"]) %>,
+            "to": <%= to([["c", ["right_gui", "left_option"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("eagle") %> ]
+          },
+          {
+            "description": ",[カンマ]_パスをコピー",
+            "type": "basic",
+            "from": <%= from("comma", ["caps_lock"]) %>,
+            "to": <%= to([["c", ["right_gui", "left_option"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("eagle") %> ]
+          },
+          {
+            "description": "LeftOption + O_Expansion",
+            "type": "basic",
+            "from": <%= from("o", ["left_option"]) %>,
+            "to": <%= to([["equal_sign", ["right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("eagle") %> ]
+          },
+          {
+            "description": "LeftOption + i_Shrink",
+            "type": "basic",
+            "from": <%= from("i", ["left_option"]) %>,
+            "to": <%= to([["hyphen", ["right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("eagle") %> ]
+          },
+          {
+            "description": "LeftOption + .[ピリオド]_pathFinderから開く",
+            "type": "basic",
+            "from": <%= from("period", ["left_option"]) %>,
+            "to": <%= to([["return_or_enter", ["right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("eagle") %> ]
+          },
+          {
+            "description": "O[オー]_Expansion",
+            "type": "basic",
+              "from": <%= from("o",["caps_lock"]) %>,
+            "to": <%= to([["equal_sign", ["right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("eagle") %> ]
+          },
+          {
+            "description": "i_Shrink",
+            "type": "basic",
+            "from": <%= from("i",["caps_lock"]) %>,
+            "to": <%= to([["hyphen", ["right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("eagle") %> ]
+          },
+          {
+            "description": "h_LeftArrow",
+            "type": "basic",
+            "from": <%= from("h",["caps_lock"]) %>,
+            "to": <%= to([["left_arrow"]]) %>,
+            "conditions": [ <%= frontmost_application_if("eagle") %> ]
+          },
+          {
+            "description": "L_RigthArrow",
+            "type": "basic",
+            "from": <%= from("l",["caps_lock"]) %>,
+            "to": <%= to([["right_arrow"]]) %>,
+            "conditions": [ <%= frontmost_application_if("eagle") %> ]
+          },
+          {
+            "description": "LeftCommand + T_サイドバー切替",
+            "type": "basic",
+            "from": <%= from("t", ["left_control"], ["caps_lock"]) %>,
+            "to": <%= to([["1", ["right_gui", "left_option"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("eagle") %> ]
+          },
+          {
+            "description": "T_サイドバー切替",
+            "type": "basic",
+            "from": <%= from("t",["caps_lock"]) %>,
+            "to": <%= to([["1", ["right_gui", "left_option"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("eagle") %> ]
+          },
+          {
+            "description": "LeftCommand + i_詳細情報切替",
+            "type": "basic",
+            "from": <%= from("i", ["left_control"], ["caps_lock"]) %>,
+            "to": <%= to([["2", ["right_gui", "left_option"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("eagle") %> ]
+          },
+          {
+            "description": "Z_詳細情報切替",
+            "type": "basic",
+            "from": <%= from("z",["caps_lock"]) %>,
+            "to": <%= to([["2", ["right_gui", "left_option"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("eagle") %> ]
+          },
+          {
+            "description": "LeftAlt + A_新しいフォルダー",
+            "type": "basic",
+            "from": <%= from("a", ["left_alt"], ["caps_lock"]) %>,
+            "to": <%= to([["n", ["right_shift", "right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("eagle") %> ]
+          },
+          {
+            "description": "LeftCommand + P_フォルダーを切り替える",
+            "type": "basic",
+            "from": <%= from("p", ["left_control"], ["caps_lock"]) %>,
+            "to": <%= to([["j", ["right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("eagle") %> ]
+          },
+          {
+            "description": "P_フォルダーを切り替える",
+            "type": "basic",
+            "from": <%= from("p", ["caps_lock"]) %>,
+            "to": <%= to([["j", ["right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("eagle") %> ]
+          },
+          {
+            "description": "LeftCommand + CloseBracket_未分類",
+            "type": "basic",
+            "from": <%= from("close_bracket", ["left_control"], ["caps_lock"]) %>,
+            "to": <%= to([["2", ["right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("eagle") %> ]
+          },
+          {
+            "description": "CloseBracket_未分類",
+            "type": "basic",
+            "from": <%= from("close_bracket", ["caps_lock"]) %>,
+            "to": <%= to([["2", ["right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("eagle") %> ]
+          },
+          {
+            "description": "U_Undo",
+            "type": "basic",
+            "from": <%= from("u",["caps_lock"]) %>,
+            "to": <%= to([["z", ["right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("eagle") %> ]
+          },
+          {
+            "description": "LeftAlt + Period_Pathfinderで開く",
+            "type": "basic",
+            "from": <%= from("period", ["left_alt"], ["caps_lock"]) %>,
+            "to": <%= to([["return_or_enter", ["left_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("eagle") %> ]
+          },
+          {
+            "description": "Fn + U_WindowLeftUp",
+            "type": "basic",
+            "from": <%= from("u", ["right_control"], ["caps_lock"]) %>,
+            "to": <%= to([["6", "right_alt"]]) %>,
+            "conditions": [ <%= frontmost_application_if("eagle") %> ]
+          },
+          {
+              "description": "Fn + J_WindowLeftDown",
+              "type": "basic",
+              "from": <%= from("j", ["right_control"], ["caps_lock"]) %>,
+              "to": <%= to([["8", "right_alt"]]) %>,
+              "conditions": [ <%= frontmost_application_if("eagle") %> ]
+          },
+          {
+              "description": "Fn + I_WindowRightUp",
+              "type": "basic",
+              "from": <%= from("i", ["right_control"], ["caps_lock"]) %>,
+              "to": <%= to([["7", "right_alt"]]) %>,
+              "conditions": [ <%= frontmost_application_if("eagle") %> ]
+          },
+          {
+              "description": "Fn + K_WindowRightDown",
+              "type": "basic",
+              "from": <%= from("k", ["right_control"], ["caps_lock"]) %>,
+              "to": <%= to([["9", "right_alt"]]) %>,
+              "conditions": [ <%= frontmost_application_if("eagle") %> ]
+          },
+          {
+              "description": "Fn + G_WindowLeftOneThird",
+              "type": "basic",
+              "from": <%= from("g", ["right_control"], ["caps_lock"]) %>,
+              "to": <%= to([["d", ["right_control", "right_alt"]]]) %>,
+              "conditions": [ <%= frontmost_application_if("eagle") %> ]
+          },
+          {
+              "description": "Fn + Quote_WindowRightOneThird",
+              "type": "basic",
+              "from": <%= from("quote", ["right_control"], ["caps_lock"]) %>,
+              "to": <%= to([["g", ["right_control", "right_alt"]]]) %>,
+              "conditions": [ <%= frontmost_application_if("eagle") %> ]
+          },
+          {
+              "description": "Fn + Y_WindowLeftTwo-thirds",
+              "type": "basic",
+              "from": <%= from("y", ["right_control"], ["caps_lock"]) %>,
+              "to": <%= to([["e", ["right_control", "right_alt"]]]) %>,
+              "conditions": [ <%= frontmost_application_if("eagle") %> ]
+          },
+          {
+              "description": "Fn + O_WindowRightTwo-thirds",
+              "type": "basic",
+              "from": <%= from("o", ["right_control"], ["caps_lock"]) %>,
+              "to": <%= to([["t", ["right_control", "right_alt"]]]) %>,
+              "conditions": [ <%= frontmost_application_if("eagle") %> ]
+          },
+          {
+              "description": "Fn + Comma_WindowCenter",
+              "type": "basic",
+              "from": <%= from("comma", ["right_control"], ["caps_lock"]) %>,
+              "to": <%= to([["c", ["right_control", "right_alt"]]]) %>,
+              "conditions": [ <%= frontmost_application_if("eagle") %> ]
+          },
+          {
+            "description": "RightCommand + Period_MaxWindow",
+            "type": "basic",
+            "from": <%= from("period", ["right_gui"], ["caps_lock"]) %>,
+            "to": <%= to([["f", ["right_control", "right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("eagle") %> ]
+          },
+          {
+              "description": "Fn + N_WindowUP",
+              "type": "basic",
+              "from": <%= from("n", ["right_control"], ["caps_lock"]) %>,
+              "to": <%= to([["4", ["left_alt"]]]) %>,
+              "conditions": [ <%= frontmost_application_if("eagle") %> ]
+          },
+          {
+              "description": "Fn + M_WindowDown",
+              "type": "basic",
+              "from": <%= from("m", ["right_control"], ["caps_lock"]) %>,
+              "to": <%= to([["5", ["left_alt"]]]) %>,
+              "conditions": [ <%= frontmost_application_if("eagle") %> ]
+          },
+          {
+            "description": "Fn + L_RightHalfWindowMove",
+            "type": "basic",
+            "from": <%= from("l", ["right_control"], ["caps_lock"]) %>,
+            "to": <%= to([["3", ["right_alt"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("eagle") %> ]
+          },
+          {
+            "description": "Fn + H_LeftWindowMove",
+            "type": "basic",
+            "from": <%= from("h", ["right_control"], ["caps_lock"]) %>,
+            "to": <%= to([["2", ["right_alt"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("eagle") %> ]
+          },
+          {
+            "description": "LeftOption_Rename",
+            "type": "basic",
+            "from": {
+              "apple_vendor_top_case_key_code":"keyboard_fn",
+            "modifiers": {
+                "optional": [
+                  "caps_lock"
+                ]
+              }
+            },
+            "to": [
+              {
+                "key_code": "f2"
+              }
+            ],
+            "conditions": [
+              {
+                "type": "frontmost_application_if",
+                "bundle_identifiers": [
+                  "^tw.ogdesign.eagle$"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+}

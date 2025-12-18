@@ -1,0 +1,1 @@
+{"title":"BackSpace","rules":[{"description":"RightCommand + LeftCommand_BackSpace","manipulators":[{"type":"basic","from":{"modifiers":{"mandatory":["right_gui"],"optional":["any"]},"key_code":"left_control"},"to":[{"repeat":true,"key_code":"delete_or_backspace","modifiers":[]}],"to_if_alone":[{"repeat":false,"key_code":"right_gui","modifiers":["left_control"]}]}]}]}

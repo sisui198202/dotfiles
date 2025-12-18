@@ -1,0 +1,17 @@
+{
+  "title": "number_0-9 (@sisui)_ver1",
+  "rules": [
+    {
+      "description": "numbers_0-9_ver1",
+      "manipulators":
+      <%=
+               each_key(
+                 source_keys_list: ["z", "x", "c", "v","s","d","f","w","e","r"],
+                 from_mandatory_modifiers: ["right_gui"],
+                 dest_keys_list: ["0", "1", "2", "3","4","5","6","7","8","9"],
+                 as_json: true
+               )
+       %>
+    }
+    ]
+}<%# toに次のコードを手動で入れる必要あり、{"key_code": "japanese_eisuu"}, %>

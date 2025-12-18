@@ -1,0 +1,24 @@
+{
+  "title": "FrontmostIfNotion_summary1",
+  "rules": [
+    {
+      "description": "FrontmostIfNotion_summary1",
+      "manipulators": [
+        {
+          "description": "RightOption + A_新しいNotionウィンドウを開く",
+          "type": "basic",
+          "from": <%= from("a", ["right_option"], ["caps_lock"]) %>,
+          "to": <%= to([["n", ["left_shift", "right_gui"]]]) %>,
+          "conditions": [ <%= frontmost_application_if("notion") %> ]
+        },
+        {
+          "description": "LeftCommand + enter_戻る",
+          "type": "basic",
+          "from": <%= from("return_or_enter", ["left_control"], ["caps_lock"]) %>,
+          "to": <%= to([["open_bracket", ["left_gui"]]]) %>,
+          "conditions": [ <%= frontmost_application_if("notion") %> ]
+        }
+      ]
+    }
+  ]
+}

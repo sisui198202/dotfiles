@@ -1,0 +1,1 @@
+{"title":"PageUp","rules":[{"description":"LeftControl + /_PageUp","manipulators":[{"type":"basic","from":{"modifiers":{"mandatory":["left_control"]},"key_code":"slash"},"to":[{"repeat":false,"key_code":"up_arrow","modifiers":["fn"]}]}]}]}

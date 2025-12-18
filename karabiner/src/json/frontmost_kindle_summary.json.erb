@@ -1,0 +1,377 @@
+{
+    "title": "FrontmostIfKindle_summary",
+    "rules": [
+      {
+        "description": "FrontmostIfKindle_summary",
+        "manipulators": [
+          {
+            "description": "J_DownArrow",
+            "type": "basic",
+            "from": <%= from("j",["caps_lock"]) %>,
+            "to": <%= to([["down_arrow"]]) %>,
+            "conditions": [ <%= frontmost_application_if("kindle") %> ]
+          },
+          {
+            "description": "K_UpArrow",
+            "type": "basic",
+            "from": <%= from("k",["caps_lock"]) %>,
+            "to": <%= to([["up_arrow"]]) %>,
+            "conditions": [ <%= frontmost_application_if("kindle") %> ]
+          },
+          {
+            "description": "h_LeftArrow",
+            "type": "basic",
+            "from": <%= from("h",["caps_lock"]) %>,
+            "to": <%= to([["left_arrow"]]) %>,
+            "conditions": [ <%= frontmost_application_if("kindle") %> ]
+          },
+          {
+            "description": "L_RigthArrow",
+            "type": "basic",
+            "from": <%= from("l",["caps_lock"]) %>,
+            "to": <%= to([["right_arrow"]]) %>,
+            "conditions": [ <%= frontmost_application_if("kindle") %> ]
+          },
+          {
+            "description": "M_EndRowCursol",
+            "type": "basic",
+            "from": <%= from("m",["caps_lock"]) %>,
+            "to": <%= to([["right_arrow", ["fn"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("kindle") %> ]
+          },
+          {
+            "description": "N_HeadRowCursol",
+            "type": "basic",
+            "from": <%= from("n",["caps_lock"]) %>,
+            "to": <%= to([["left_arrow", ["fn"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("kindle") %> ]
+          },
+          {
+            "description": "U_幅にフィット197%",
+            "type": "basic",
+            "from": <%= from("u",["caps_lock"]) %>,
+            "to": <%= to([["2", ["right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("kindle") %> ]
+          },
+          {
+            "description": "W_画面にフィット121%",
+            "type": "basic",
+            "from": <%= from("w",["caps_lock"]) %>,
+            "to": <%= to([["0", ["right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("kindle") %> ]
+          },
+          {
+            "description": "LeftOption + O(オー)_画面にフィット121%",
+            "type": "basic",
+            "from": <%= from("o", ["left_option"]) %>,
+            "to": <%= to([["0", ["right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("kindle") %> ]
+          },
+          {
+            "description": "LeftOption + U_幅にフィット197%",
+            "type": "basic",
+            "from": <%= from("u", ["left_option"]) %>,
+            "to": <%= to([["2", ["right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("kindle") %> ]
+          },
+          {
+            "description": "P_RightHalfWindowMove",
+            "type": "basic",
+            "from": <%= from("p",["caps_lock"]) %>,
+            "to": <%= to([["3", ["right_alt"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("kindle") %> ]
+          },
+          {
+            "description": "Y_実際のサイズ100%",
+            "type": "basic",
+            "from": <%= from("y",["caps_lock"]) %>,
+            "to": <%= to([["1", ["right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("kindle") %> ]
+          },
+          {
+            "description": "LeftOption + Y_実際のサイズ100%",
+            "type": "basic",
+            "from": <%= from("y", ["left_option"]) %>,
+            "to": <%= to([["1", ["right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("kindle") %> ]
+          },
+          {
+            "description": "B_ブックマーク追加",
+            "type": "basic",
+            "from": <%= from("b",["caps_lock"]) %>,
+            "to": <%= to([["d", ["right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("kindle") %> ]
+          },
+          {
+            "description": "T_ブックマークリスト表示",
+            "type": "basic",
+            "from": <%= from("t",["caps_lock"]) %>,
+            "to": <%= to([["b", ["right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("kindle") %> ]
+          },
+          {
+            "description": "F_WindowBottomHalf",
+            "type": "basic",
+            "from": <%= from("f",["caps_lock"]) %>,
+            "to": <%= to([["5", ["left_alt"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("kindle") %> ]
+          },
+          {
+            "description": "D_WindowTopHalf",
+            "type": "basic",
+            "from": <%= from("d",["caps_lock"]) %>,
+            "to": <%= to([["4", ["left_alt"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("kindle") %> ]
+          },
+          {
+            "description": "E_SelfTextDirectory",
+            "type": "basic",
+            "from": <%= from("e",["caps_lock"]) %>,
+            "to": <%= to([["8", ["left_shift", "right_option","right_control"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("kindle") %> ]
+          },
+          {
+            "description": "O(オー)_Expansion",
+            "type": "basic",
+            "from": <%= from("o",["caps_lock"]) %>,
+            "to": <%= to([["equal_sign", ["fn", "right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("kindle") %> ]
+          },
+          {
+            "description": "i_Shrink",
+            "type": "basic",
+            "from": <%= from("i",["caps_lock"]) %>,
+            "to": <%= to([["backslash", ["left_control", "left_alt"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("kindle") %> ]
+          },
+          {
+            "description": "R_miアクテイブ",
+            "type": "basic",
+            "from": <%= from("r",["caps_lock"]) %>,
+            "to": <%= set_shell_command(["open -a 'mi'"]) %>,
+            "conditions": [ <%= frontmost_application_if("kindle") %> ]
+          },
+          {
+            "description": "Q_LeftHalfWindowMove",
+            "type": "basic",
+            "from": <%= from("q",["caps_lock"]) %>,
+            "to": <%= to([["2", ["right_alt"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("kindle") %> ]
+          },
+          {
+            "description": "Z_Home",
+            "type": "basic",
+            "from": <%= from("z",["caps_lock"]) %>,
+            "to": <%= to([["9", ["right_control", "left_shift"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("kindle") %> ]
+          },
+          {
+            "description": "OpenBracket[オープン角括弧]_ページ数指定",
+            "type": "basic",
+            "from": <%= from("open_bracket",["caps_lock"]) %>,
+            "to": <%= to([["g", ["right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("kindle") %> ]
+          },
+          {
+            "description": "G_FileTabClose",
+            "type": "basic",
+            "from": <%= from("g",["caps_lock"]) %>,
+            "to": <%= to([["w", ["right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("kindle") %> ]
+          },
+          {
+            "description": "Period_WindowMax",
+            "type": "basic",
+            "from": <%= from("period",["caps_lock"]) %>,
+            "to": <%= to([["f", ["right_control", "right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("kindle") %> ]
+          },
+          {
+            "description": "Comma_AppsSelect-Next",
+            "type": "basic",
+            "from": <%= from("comma",["caps_lock"]) %>,
+            "to": <%= to([["tab", "right_gui"]]) %>,
+            "conditions": [ <%= frontmost_application_if("kindle") %> ]
+          },
+          {
+            "description": "LeftAlt + A_FullScreenOn",
+            "type": "basic",
+            "from": <%= from("a", ["left_alt"]) %>,
+            "to": <%= to([["7", ["right_shift", "right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("kindle") %> ]
+          },
+          {
+            "description": "RightAlt + A_FullScreenOff",
+            "type": "basic",
+            "from": <%= from("a", ["right_alt"]) %>,
+            "to": <%= to([["f", ["right_gui", "left_control"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("kindle") %> ]
+          },
+          {
+            "description": "LeftAlt + OpenBracket_ページ数指定",
+            "type": "basic",
+            "from": <%= from("open_bracket", ["left_alt"]) %>,
+            "to": <%= to([["g", ["right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("kindle") %> ]
+          },
+          {
+            "description": "LeftCommand + Z_Home",
+            "type": "basic",
+            "from": <%= from("z", ["left_control"]) %>,
+            "to": <%= to([["9", ["left_control", "left_alt"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("kindle") %> ]
+          },
+          {
+            "description": "RightAlt + Z_一部起動しない目次",
+            "type": "basic",
+            "from": <%= from("z", ["right_alt"]) %>,
+            "to": <%= to([["4", ["left_control", "left_alt"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("kindle") %> ]
+          },
+          {
+            "description": "LeftCommand + O(オー)_Expansion",
+            "type": "basic",
+            "from": <%= from("o", ["left_control"]) %>,
+            "to": <%= to([["equal_sign", ["fn", "right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("kindle") %> ]
+          },
+          {
+            "description": "LeftCommand + i_Shrink",
+            "type": "basic",
+            "from": <%= from("i", ["left_control"]) %>,
+            "to": <%= to([["backslash", ["left_control", "left_alt"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("kindle") %> ]
+          },
+          {
+            "description": "RightCommand + B_ブックマーク追加",
+            "type": "basic",
+            "from": <%= from("b", ["right_gui"]) %>,
+            "to": <%= to([["d", ["right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("kindle") %> ]
+          },
+          {
+            "description": "A_AppleMusicActiveWindow",
+            "type": "basic",
+            "from": <%= from("a",["caps_lock"]) %>,
+            "to": <%= set_shell_command(["open -a 'Music.app'"]) %>,
+            "conditions": [ <%= frontmost_application_if("kindle") %>]
+          },
+          {
+            "description": "C_ChromeOpen",
+            "type": "basic",
+            "from": {
+              "key_code": "c",
+              "modifiers": {
+                "mandatory": [
+                  "caps_lock"
+                ]
+              }
+            },
+            "to": [
+              {
+                "shell_command": "open -a 'Google Chrome.app'"
+              }
+            ],
+            "conditions": [
+              {
+                "type": "frontmost_application_if",
+                "bundle_identifiers": [
+                  "^com.amazon.Kindle$"
+                ]
+              }
+            ]
+        },
+        {
+          "description": "Quote_UpArrow-X3",
+          "type": "basic",
+          "from": {
+            "key_code": "quote",
+            "modifiers": {
+              "mandatory": [
+                "caps_lock"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "up_arrow"
+            },
+            {
+              "key_code": "up_arrow"
+            },
+            {
+              "key_code": "up_arrow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com.amazon.Kindle$"
+              ]
+            }
+          ]
+        },
+        {
+          "description": "LeftCommand + k_UpArrow-X3",
+          "type": "basic",
+          "from": {
+            "key_code": "k",
+            "modifiers": {
+              "mandatory": [
+                "left_control"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "up_arrow"
+            },
+            {
+              "key_code": "up_arrow"
+            },
+            {
+              "key_code": "up_arrow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com.amazon.Kindle$"
+              ]
+            }
+          ]
+        },
+        {
+                "description": "1(イチ)_RightTitleBarMouseClick",
+                "type": "basic",
+                "from": <%= from("1",["caps_lock"]) %>,
+                "to": [
+                    {
+                    "software_function": {
+                      "set_mouse_cursor_position": {
+                        "x": "950",
+                        "y": "35",
+                        "screen": 0
+                      }
+                    }
+                    },
+                  { "pointing_button": "button1" }
+                ],
+          "conditions": [
+              {
+                "type": "frontmost_application_if",
+                "bundle_identifiers": [
+                  "^com.amazon.Kindle$"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+}

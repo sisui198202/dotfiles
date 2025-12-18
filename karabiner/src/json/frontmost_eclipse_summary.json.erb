@@ -1,0 +1,178 @@
+{
+    "title": "FrontmostIfEclipse_summary",
+    "rules": [
+      {
+        "description": "FrontmostIfEclipse_summary",
+        "manipulators": [
+          {
+            "description": "LeftCommand + semicolon_CurrentRowCursolEnd",
+            "type": "basic",
+            "from": <%= from("semicolon", ["left_control"], ["caps_lock"]) %>,
+            "to": <%= to([["right_arrow", ["right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("eclipse") %>]
+          },
+          {
+            "description": "LeftCommand + A_CurrentRowCursolHead",
+            "type": "basic",
+            "from": <%= from("a", ["left_control"], ["caps_lock"]) %>,
+            "to": <%= to([["left_arrow", ["right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("eclipse") %>]
+          },
+          {
+            "description": "LeftCommand + E_次の単語を選択",
+            "type": "basic",
+            "from": <%= from("e", ["left_control"], ["caps_lock"]) %>,
+            "to": <%= to([["3", ["right_option", "right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("eclipse") %> ]
+          },
+          {
+            "description": "LeftCommand + P_次の要素を選択",
+            "type": "basic",
+            "from": <%= from("p", ["left_control"], ["caps_lock"]) %>,
+            "to": <%= to([["3", ["right_option","left_shift"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("eclipse") %> ]
+          },
+          {
+            "description": "RightCommand + H_ビューの表示[パッケージ・エクスプローラー]",
+            "type": "basic",
+            "from": <%= from("h", ["right_gui"], ["caps_lock"]) %>,
+            "to": <%= to([["1", ["right_option","left_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("eclipse") %> ]
+          },
+          {
+            "description": "LeftCommand + O[オウ]_エディター分割切替[垂直]",
+            "type": "basic",
+            "from": <%= from("o", ["left_control"], ["caps_lock"]) %>,
+            "to": <%= to([["backslash", ["left_control"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("eclipse") %>]
+          },
+          {
+            "description": "LeftCommand + 0[ゼロ]_エディター分割切替[水平]",
+            "type": "basic",
+            "from": <%= from("0", ["left_control"], ["caps_lock"]) %>,
+            "to": <%= to([["open_bracket", ["left_control"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("eclipse") %>]
+          },
+          {
+            "description": "RightOption + G_コードアシスト",
+            "type": "basic",
+            "from": <%= from("g", ["right_option"], ["caps_lock"]) %>,
+            "to": <%= to([["spacebar", ["left_control"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("eclipse") %>]
+          },
+          {
+            "description": "LeftCommand + Z_現在行の下に行を挿入",
+            "type": "basic",
+            "from": <%= from("z", ["left_control"], ["caps_lock"]) %>,
+            "to": <%= to([["return_or_enter", ["right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("eclipse") %> ]
+          },
+          {
+            "description": "RightOption + Z_現在行の上に行を挿入",
+            "type": "basic",
+            "from": <%= from("z", ["right_option"], ["caps_lock"]) %>,
+            "to": <%= to([["7", ["right_option","left_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("eclipse") %> ]
+          },
+          {
+            "description": "LeftOption + backslash_ブロック選択の切り替え",
+            "type": "basic",
+            "from": <%= from("backslash", ["left_option"], ["caps_lock"]) %>,
+            "to": <%= to([["2", ["right_option","left_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("eclipse") %> ]
+          },
+          {
+            "description": "LeftOption + period_行をコピ",
+            "type": "basic",
+            "from": <%= from("period", ["left_option"], ["caps_lock"]) %>,
+            "to": <%= to([["0", ["right_option","left_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("eclipse") %> ]
+          },
+          {
+            "description": "RightCommand + k_行を削除",
+            "type": "basic",
+            "from": <%= from("k", ["right_gui"], ["caps_lock"]) %>,
+            "to": <%= to([["4", ["right_option","left_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("eclipse") %> ]
+          },
+          {
+            "description": "LeftCommand + openbracket_リソースを開く",
+            "type": "basic",
+            "from": <%= from("open_bracket", ["left_control"], ["caps_lock"]) %>,
+            "to": <%= to([["1", ["right_shift","left_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("eclipse") %> ]
+          },
+          {
+            "description": "RightOption + X_次のビュー",
+            "type": "basic",
+            "from": <%= from("x", ["right_option"], ["caps_lock"]) %>,
+            "to": <%= to([["2", ["right_shift","left_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("eclipse") %> ]
+          },
+          {
+            "description": "RightOption + L_次のパースペクティブ",
+            "type": "basic",
+            "from": <%= from("l", ["right_option"], ["caps_lock"]) %>,
+            "to": <%= to([["3", ["right_shift","left_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("eclipse") %> ]
+          },
+          {
+            "description": "LeftOption + G_指定行へジャンプ",
+            "type": "basic",
+            "from": <%= from("g", ["left_option"], ["caps_lock"]) %>,
+            "to": <%= to([["4", ["right_shift","left_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("eclipse") %> ]
+          },
+          {
+            "description": "RightOption + i_エディターをアクティブにする",
+            "type": "basic",
+            "from": <%= from("i", ["right_option"], ["caps_lock"]) %>,
+            "to": <%= to([["5", ["right_shift","left_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("eclipse") %> ]
+          },
+          {
+            "description": "RightCommand + カンマ_アクティブ・ビューまたはエディター最大化",
+            "type": "basic",
+            "from": <%= from("comma", ["right_gui"], ["caps_lock"]) %>,
+            "to": <%= to([["6", ["right_shift","left_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("eclipse") %> ]
+          },
+          {
+            "description": "LeftCommand + T_アクティブ・ビューまたはエディター最小化",
+            "type": "basic",
+            "from": <%= from("t", ["left_control"], ["caps_lock"]) %>,
+            "to": <%= to([["7", ["right_shift","left_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("eclipse") %> ]
+          },
+          {
+            "description": "RightOption + T_クイック・フィックス",
+            "type": "basic",
+            "from": <%= from("t", ["right_option"], ["caps_lock"]) %>,
+            "to": <%= to([["8", ["right_shift","left_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("eclipse") %> ]
+          },
+          {
+            "description": "LeftOption + openbracket_アクションの検索",
+            "type": "basic",
+            "from": <%= from("open_bracket", ["left_option"], ["caps_lock"]) %>,
+            "to": <%= to([["9", ["right_shift","left_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("eclipse") %> ]
+          },
+          {
+            "description": "LeftOption + comma_ルーラー・コンテキスト・メニューの表示",
+            "type": "basic",
+            "from": <%= from("comma", ["left_option"], ["caps_lock"]) %>,
+            "to": <%= to([["0", ["right_shift","left_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("eclipse") %> ]
+          },
+          {
+            "description": "うまくいかない_RightCommand + O_SameWordExpandSelection",
+            "type": "basic",
+            "from": <%= from("o", ["right_gui"], ["caps_lock"]) %>,
+            "to": <%= to([["0", ["right_option", "right_gui"]]]) %>,
+            "conditions": [ <%= frontmost_application_if("eclipse") %> ]
+          }
+        ]
+      }
+    ]
+}

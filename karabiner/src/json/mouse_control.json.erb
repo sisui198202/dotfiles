@@ -1,0 +1,160 @@
+{
+    "title": "MouseControl8",
+    "rules": [
+       {
+            "description": "A_RightTitleBarMouseClick(MouseControl)",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": <%= from("a") %>,
+      "to": [
+        {
+          "software_function": {
+            "set_mouse_cursor_position": {
+              "x": "850",
+              "y": "40",
+              "screen": 0
+            }
+          }
+        },
+        { "pointing_button": "button1" },
+        {
+            "key_code": "right_arrow",
+            "modifiers": [
+            "fn"
+            ]
+        }
+],
+"conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com.amazon.Kindle$"
+              ]
+            }
+          ]
+              }
+            ]
+          },
+        {
+            "description": "使用しない_RAlt + Z_VisualBasic-Excel(MouseControl)",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": <%= from("z", ["right_alt"]) %>,
+      "to": [
+        {
+          "software_function": {
+            "set_mouse_cursor_position": {
+              "x": "20",
+              "y": "60",
+              "screen": 0
+            }
+          }
+        },
+        { "pointing_button": "button1" }
+],
+"conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com.parallels.desktop.console$",
+                "^com.parallels.winapp.b06b57f82d7f519cdfa3013b29968f3d.b9dc48efd5094ca8a69c0e98f2ecf717$",
+                "^com.parallels.winapp.7d56d4002964a683f165ae699d4ad1ba.b9dc48efd5094ca8a69c0e98f2ecf717$",
+                "^com.parallels.winapp.d51a768a01445deddc409dc4b3c07517.b9dc48efd5094ca8a69c0e98f2ecf717$",
+                "^com.parallels.winapp.c1d81af5835844b4e9d936910ded8fdc.b9dc48efd5094ca8a69c0e98f2ecf717$"
+              ]
+            }
+          ]
+              }
+            ]
+          },
+  {
+      "description": "適用しない_Fn + Spacebar_LeftClick(MouseControl)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": <%= from("spacebar", ["fn"]) %>,
+          "to": <%= to([["button1", ["left_gui"]]]) %>
+        }
+      ]
+    },
+    {
+        "description": "適用しない_WindowLeftUp(MouseControl)",
+        "manipulators": [
+            {
+                "type": "basic",
+                "from": {
+                    "key_code": "i",
+                    "modifiers": {
+                        "mandatory": [
+                            "fn"
+                        ]
+                    }
+                },
+                "to": [
+                    {
+                        "mouse_key": {
+                            "y": -2500
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "basic",
+                "from": {
+                    "key_code": "j",
+                    "modifiers": {
+                        "mandatory": [
+                            "fn"
+                        ]
+                    }
+                },
+                "to": [
+                    {
+                        "mouse_key": {
+                            "x": -2500
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "basic",
+                "from": {
+                    "key_code": "k",
+                    "modifiers": {
+                        "mandatory": [
+                            "fn"
+                        ]
+                    }
+                },
+                "to": [
+                    {
+                        "mouse_key": {
+                            "y": 2500
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "basic",
+                "from": {
+                    "key_code": "l",
+                    "modifiers": {
+                        "mandatory": [
+                            "fn"
+                        ]
+                    }
+                },
+                "to": [
+                    {
+                        "mouse_key": {
+                            "x": 2500
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+    ]
+}

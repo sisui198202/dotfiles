@@ -1,0 +1,104 @@
+{
+    "title": "FrontmostIfEvernote1",
+    "rules": [
+    {
+      "description": "RightCommand + Spacebar_ゴミ箱に移動(Evernote)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": <%= from("spacebar", ["right_gui"], ["caps_lock"]) %>,
+          "to": <%= to([["9", ["left_control", "right_alt"]]]) %>,
+          "conditions": [ <%= frontmost_application_if("evernote") %> ]
+        }
+      ]
+    },
+    {
+      "description": "LeftOption + M_ノートの移動先を検索(Evernote)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": <%= from("m", ["left_option"], ["caps_lock"]) %>,
+          "to": <%= to([["m", ["right_control", "right_gui"]]]) %>,
+          "conditions": [ <%= frontmost_application_if("evernote") %> ]
+        }
+      ]
+    },
+    {
+      "description": "LeftOption + N_ノートに移動(Evernote)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": <%= from("n", ["left_option"], ["caps_lock"]) %>,
+          "to": <%= to([["2", ["right_gui", "right_option"]]]) %>,
+          "conditions": [ <%= frontmost_application_if("evernote") %> ]
+        }
+      ]
+    },
+    {
+      "description": "LeftOption + D_ノートブックに移動(Evernote)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": <%= from("d", ["left_option"], ["caps_lock"]) %>,
+          "to": <%= to([["4", ["right_gui", "right_option"]]]) %>,
+          "conditions": [ <%= frontmost_application_if("evernote") %> ]
+        }
+      ]
+    },
+    {
+      "description": "LeftCommand + T_タグに移動(Evernote)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": <%= from("t", ["left_control"], ["caps_lock"]) %>,
+          "to": <%= to([["5", ["right_gui", "right_option"]]]) %>,
+          "conditions": [ <%= frontmost_application_if("evernote") %> ]
+        }
+      ]
+    },
+    {
+      "description": "LeftOption + U_戻る(Evernote)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": <%= from("u", ["left_option"], ["caps_lock"]) %>,
+          "to": <%= to([["open_bracket", ["right_gui"]]]) %>,
+          "conditions": [ <%= frontmost_application_if("evernote") %> ]
+        }
+      ]
+    },
+    {
+      "description": "Rightcommand + T_ノートを検索(Evernote)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": <%= from("t", ["right_gui"], ["caps_lock"]) %>,
+          "to": <%= to([["f", ["right_option", "right_gui"]]]) %>,
+          "conditions": [ <%= frontmost_application_if("evernote") %> ]
+        }
+      ]
+    },
+    {
+      "description": "RightOption + T_タグを編集(Evernote)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": <%= from("t", ["right_option"], ["caps_lock"]) %>,
+          "to": <%= to([["t", ["left_control", "right_option", "right_gui"]]]) %>,
+          "conditions": [ <%= frontmost_application_if("evernote") %> ]
+        }
+      ]
+    },
+    {
+      "description": "LeftOption + R_検索と置換(Evernote)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": <%= from("r", ["left_option"], ["caps_lock"]) %>,
+          "to": <%= to([["f", ["right_shift", "right_gui"]]]) %>,
+          "conditions": [ <%= frontmost_application_if("evernote") %> ]
+        }
+      ]
+    }
+    ]
+}

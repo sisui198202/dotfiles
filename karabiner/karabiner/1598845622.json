@@ -1,0 +1,1 @@
+{"title":"Cursol-RowEnd","rules":[{"description":"LeftCommand + ;_Cursol-RowEnd","manipulators":[{"type":"basic","from":{"modifiers":{"mandatory":["left_control"]},"key_code":"semicolon"},"to":[{"repeat":false,"key_code":"e","modifiers":["left_control"]}]}]}]}

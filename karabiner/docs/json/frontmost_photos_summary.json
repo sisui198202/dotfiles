@@ -1,0 +1,35 @@
+{
+  "title": "FrontmostIfPhotes_summary",
+  "rules": [
+    {
+      "description": "FrontmostIfPhotes_summary",
+      "manipulators": [
+        {
+          "description": "RightCommand + Space_delete(photos)",
+          "type": "basic",
+          "from": {
+            "key_code": "spacebar",
+            "modifiers": {
+              "mandatory": [
+                "right_gui"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "delete_or_backspace"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com.apple.Photos$"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

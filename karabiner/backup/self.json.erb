@@ -1,0 +1,567 @@
+<%# 1:"repeat": false or trueは、実装できていない。　2:Double LeftShift_+実装できていない、3:Double RightShift_Backshash 実装できていない。4:halt実装できていない。5:lazy実装できていない。%>
+{
+  "title": "PersonalRules(@sisui)",
+  "rules": [
+    {
+      "description": "Use F2 as Rename",
+      "manipulators":
+      <%=
+               each_key(
+                 source_keys_list: ["f2"],
+                 dest_keys_list: ["return_or_enter"],
+                 as_json: true
+               )
+       %>
+    },
+    {
+      "description": "RightCommand + A_ NewFileCreate_ver1",
+      "manipulators":
+      <%=
+               each_key(
+                 source_keys_list: ["a"],
+                 from_mandatory_modifiers: ["right_gui"],
+                 dest_keys_list: ["n"],
+                 to_modifiers: ["right_gui"],
+                 as_json: true
+               )
+       %>
+    },
+    {
+      "description": "LeftCommand + V__AppClose",
+      "manipulators":
+      <%=
+               each_key(
+                 source_keys_list: ["v"],
+                 from_mandatory_modifiers: ["left_control"],
+                 dest_keys_list: ["q"],
+                 to_modifiers: ["right_gui"],
+                 as_json: true
+               )
+       %>
+    },
+    {
+      "description": "LeftCommand + W_CurrentCursol-EndRowSelect_ver1",
+      "manipulators":
+      <%=
+               each_key(
+                 source_keys_list: ["w"],
+                 from_mandatory_modifiers: ["left_control"],
+                 dest_keys_list: ["e"],
+                 to_modifiers: ["left_shift","left_control"],
+                 as_json: true
+               )
+       %>
+    },
+    {
+      "description": "LeftCommand + M_End(!vscode)",
+      "manipulators":
+      <%=
+               each_key(
+                 source_keys_list: ["m"],
+                 from_mandatory_modifiers: ["left_control"],
+                 dest_keys_list: ["right_arrow"],
+                 conditions: [frontmost_application_unless("vscode", false)],                 
+                 to_modifiers: ["fn"],
+                 as_json: true
+               )
+       %>
+    },
+    {
+      "description": "LeftCommand + U_Undo_ver1",
+      "manipulators":
+      <%=
+               each_key(
+                 source_keys_list: ["u"],
+                 from_mandatory_modifiers: ["left_control"],
+                 dest_keys_list: ["z"],
+                 to_modifiers: ["left_gui"],
+                 as_json: true
+               )
+       %>
+    },
+    {
+      "description": "LeftCommand + ;_Cursol-RowEnd",
+      "manipulators":
+      <%=
+               each_key(
+                 source_keys_list: ["semicolon"],
+                 from_mandatory_modifiers: ["left_control"],
+                 dest_keys_list: ["e"],
+                 to_modifiers: ["left_control"],
+                 as_json: true
+               )
+       %>
+    },
+    {
+      "description": "RightCommand + T_Search_ver1",
+      "manipulators":
+      <%=
+               each_key(
+                 source_keys_list: ["t"],
+                 from_mandatory_modifiers: ["right_gui"],
+                 dest_keys_list: ["f"],
+                 to_modifiers: ["right_gui"],
+                 as_json: true
+               )
+       %>
+    },
+    {
+      "description": "LeftCommand + c_DesktopExist_ver1",
+      "manipulators":
+      <%=
+               each_key(
+                 source_keys_list: ["c"],
+                 from_mandatory_modifiers: ["left_control"],
+                 dest_keys_list: ["q"],
+                 to_modifiers: ["left_alt"],
+                 as_json: true
+               )
+       %>
+    },
+    {
+      "description": "LeftCommand + N_Home(!vscode)",
+      "manipulators":
+      <%=
+               each_key(
+                 source_keys_list: ["n"],
+                 from_mandatory_modifiers: ["left_control"],
+                 dest_keys_list: ["left_arrow"],
+                 conditions: [frontmost_application_unless("vscode", false)],
+                 to_modifiers: ["fn"],
+                 as_json: true
+               )
+       %>
+    },
+    {
+      "description": "LeftCommand + e_Expand Selection Word_ver1",
+      "manipulators":
+      <%=
+               each_key(
+                 source_keys_list: ["e"],
+                 from_mandatory_modifiers: ["left_control"],
+                 dest_keys_list: ["right_arrow"],
+                 to_modifiers: ["left_control","left_shift"],
+                 as_json: true
+               )
+       %>
+    },
+    {
+      "description": "RightCommand + o_SameWordExpandSelection_ver1",
+      "manipulators":
+      <%=
+               each_key(
+                 source_keys_list: ["o"],
+                 from_mandatory_modifiers: ["right_gui"],
+                 dest_keys_list: ["0"],
+                 to_modifiers: ["right_gui","right_alt"],
+                 as_json: true
+               )
+       %>
+    },
+    {
+      "description": "RCommand + ._MaxWindow",
+      "manipulators":
+      <%=
+               each_key(
+                 source_keys_list: ["period"],
+                 from_mandatory_modifiers: ["right_gui"],
+                 dest_keys_list: ["f"],
+                 to_modifiers: ["left_gui","left_control"],
+                 as_json: true
+               )
+       %>
+    },
+    {
+      "description": "LeftOption + Q_Window UP_ver2",
+      "manipulators":
+      <%=
+               each_key(
+                 source_keys_list: ["q"],
+                 from_mandatory_modifiers: ["left_alt"],
+                 dest_keys_list: ["4"],
+                 to_modifiers: ["left_alt"],
+                 as_json: true
+               )
+       %>
+    },
+    {
+      "description": "LeftOption + P_Window down_ver2",
+      "manipulators":
+      <%=
+               each_key(
+                 source_keys_list: ["p"],
+                 from_mandatory_modifiers: ["left_alt"],
+                 dest_keys_list: ["5"],
+                 to_modifiers: ["left_alt"],
+                 as_json: true
+               )
+       %>
+    },
+    {
+      "description": "LeftOption + W_Window Right up_ver2",
+      "manipulators":
+      <%=
+               each_key(
+                 source_keys_list: ["w"],
+                 from_mandatory_modifiers: ["left_alt"],
+                 dest_keys_list: ["7"],
+                 to_modifiers: ["left_alt"],
+                 as_json: true
+               )
+       %>
+    },
+    {
+      "description": "LeftOption + E_Window Right down_ver2",
+      "manipulators":
+      <%=
+               each_key(
+                 source_keys_list: ["e"],
+                 from_mandatory_modifiers: ["left_alt"],
+                 dest_keys_list: ["9"],
+                 to_modifiers: ["left_alt"],
+                 as_json: true
+               )
+       %>
+    },
+    {
+      "description": "LeftCommand + d_All Select_ver1",
+      "manipulators":
+      <%=
+               each_key(
+                 source_keys_list: ["d"],
+                 from_mandatory_modifiers: ["left_control"],
+                 dest_keys_list: ["a"],
+                 to_modifiers: ["right_gui"],
+                 as_json: true
+               )
+       %>
+    },
+    {
+      "description": "LeftCommand + B_PageDown",
+      "manipulators":
+      <%=
+               each_key(
+                 source_keys_list: ["b"],
+                 from_mandatory_modifiers: ["left_control"],
+                 dest_keys_list: ["down_arrow"],
+                 to_modifiers: ["fn"],
+                 as_json: true
+               )
+       %>
+    },
+    {
+      "description": "LeftCommand + /_PageUp",
+      "manipulators":
+      <%=
+               each_key(
+                 source_keys_list: ["slash"],
+                 from_mandatory_modifiers: ["left_control"],
+                 dest_keys_list: ["up_arrow"],
+                 to_modifiers: ["fn"],
+                 as_json: true
+               )
+       %>
+    },
+    {
+      "description": "LeftOption + O_Save_ver5",
+      "manipulators":
+      <%=
+               each_key(
+                 source_keys_list: ["o"],
+                 from_mandatory_modifiers: ["left_alt"],
+                 dest_keys_list: ["s"],
+                 to_modifiers: ["right_gui"],
+                 as_json: true
+               )
+       %>
+    },
+    {
+      "description": "LeftCommand + S_Cut_ver1",
+      "manipulators":
+      <%=
+               each_key(
+                 source_keys_list: ["s"],
+                 from_mandatory_modifiers: ["left_control"],
+                 dest_keys_list: ["x"],
+                 to_modifiers: ["right_gui"],
+                 as_json: true
+               )
+       %>
+    },
+    {
+      "description": "RightCommand + G_File-Tab-Close_ver1",
+      "manipulators":
+      <%=
+               each_key(
+                 source_keys_list: ["g"],
+                 from_mandatory_modifiers: ["right_gui"],
+                 dest_keys_list: ["w"],
+                 to_modifiers: ["right_gui"],
+                 as_json: true
+               )
+       %>
+    },
+    {
+      "description": "RightCommand + ;_LatestTabToggle_ver1",
+      "manipulators":
+      <%=
+               each_key(
+                 source_keys_list: ["semicolon"],
+                 from_mandatory_modifiers: ["right_gui"],
+                 dest_keys_list: ["tab"],
+                 to_modifiers: ["left_control"],
+                 as_json: true
+               )
+       %>
+    },
+    {
+      "description": "RightCommand + L_NextTab_ver1",
+      "manipulators":
+      <%=
+               each_key(
+                 source_keys_list: ["l"],
+                 from_mandatory_modifiers: ["right_gui"],
+                 dest_keys_list: ["tab"],
+                 to_modifiers: ["left_control","left_shift"],
+                 as_json: true
+               )
+       %>
+    },
+    {
+      "description": "LeftCommand + o_VSCODE横2画面へ_ver1",
+      "manipulators":
+      <%=
+               each_key(
+                 source_keys_list: ["o"],
+                 from_mandatory_modifiers: ["left_control"],
+                 from_optional_modifiers: ["any"],
+                 dest_keys_list: ["o"],
+                 to_modifiers: ["left_control","left_shift"],
+                 as_json: true
+               )
+       %>
+    },
+    {
+      "description": "RightCommand + I_FocusNeighboringGroup",
+      "manipulators":
+      <%=
+               each_key(
+                 source_keys_list: ["i"],
+                 from_mandatory_modifiers: ["right_gui"],
+                 from_optional_modifiers: ["any"],
+                 dest_keys_list: ["i"],
+                 to_modifiers: ["right_gui","right_alt"],
+                 as_json: true
+               )
+       %>
+    },
+    {
+      "description": "LeftCommand + H_VSCODE1画面へ",
+      "manipulators":
+      <%=
+               each_key(
+                 source_keys_list: ["h"],
+                 from_mandatory_modifiers: ["left_control"],
+                 dest_keys_list: ["h"],
+                 to_modifiers: ["right_control","left_shift"],
+                 as_json: true
+               )
+       %>
+    },
+   {
+      "description": "LeftCommand + T_ToggleSidebarOnOff",
+      "manipulators":
+      <%=
+               each_key(
+                 source_keys_list: ["t"],
+                 from_mandatory_modifiers: ["left_control"],
+                 dest_keys_list: ["t"],
+                 to_modifiers: ["right_control","left_shift"],
+                 as_json: true
+               )
+       %>
+    },
+   {
+      "description": "RightCommand + P_RightHalfMove",
+      "manipulators":
+      <%=
+               each_key(
+                 source_keys_list: ["p"],
+                 from_mandatory_modifiers: ["right_gui"],
+                 dest_keys_list: ["3"],
+                 to_modifiers: ["right_alt"],
+                 as_json: true
+               )
+       %>
+    },
+   {
+      "description": "LeftCommand + OpenBracket_Command Palete",
+      "manipulators":
+      <%=
+               each_key(
+                 source_keys_list: ["open_bracket"],
+                 from_mandatory_modifiers: ["left_control"],
+                 dest_keys_list: ["open_bracket"],
+                 to_modifiers: ["right_gui"],
+                 as_json: true
+               )
+       %>
+    },
+   {
+      "description": "LeftCommand + Q_LeftWindowMove",
+      "manipulators":
+      <%=
+               each_key(
+                 source_keys_list: ["q"],
+                 from_mandatory_modifiers: ["left_control"],
+                 dest_keys_list: ["2"],
+                 to_modifiers: ["right_option"],
+                 as_json: true
+               )
+       %>
+    },
+   {
+      "description": "LeftCommand + Z_RowCursolNewline",
+      "manipulators":
+      <%=
+               each_key(
+                 source_keys_list: ["z"],
+                 from_mandatory_modifiers: ["left_control"],
+                 dest_keys_list: ["return_or_enter"],
+                 to_modifiers: ["right_gui"],
+                 as_json: true
+               )
+       %>
+    },
+    {
+      "description": "LeftCommand + ,comma_AppsSelect-Previous",
+      "manipulators":
+      <%# toに次のコードを手動で入れる必要あり、"halt": true, %>
+      <%=
+               each_key(
+                 source_keys_list: ["comma"],
+                 from_mandatory_modifiers: ["left_control"],
+                 dest_keys_list: ["tab"],
+                 to_modifiers: ["right_gui","left_shift"],
+                 as_json: true
+               )
+       %>
+    },
+    {
+      "description": "LeftCommand + ._AppsSelect-next",
+      "manipulators":
+      <%# toに次のコードを手動で入れる必要あり、"halt": true, %>      
+      <%=
+               each_key(
+                 source_keys_list: ["period"],
+                 from_mandatory_modifiers: ["left_control"],
+                 dest_keys_list: ["tab"],
+                 to_modifiers: ["right_gui"],
+                 as_json: true
+               )
+       %>
+    },
+        {
+            "description": "1行選択_ver6",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "j",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_gui"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "l",
+                            "modifiers": [
+                                "right_gui"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+  {
+      "description": "LeftCommand + CloseBracket_unindent_ver6",
+      "manipulators":
+      <%=
+               each_key(
+                 source_keys_list: ["close_bracket"],
+                 from_mandatory_modifiers: ["left_control"],
+                 dest_keys_list: ["1"],
+                 to_modifiers: ["left_control"],
+                 as_json: true
+               )
+       %>
+    },
+   {
+      "description": "RightCommand + Slash_SelectAllSameWord2(vscode)_ver1",
+      "manipulators":
+      <%=
+               each_key(
+                 source_keys_list: ["slash"],
+                 from_mandatory_modifiers: ["right_gui"],
+                 dest_keys_list: ["2"],
+                 to_modifiers: ["right_control"],
+                 as_json: true
+               )
+       %>
+   },
+    {
+      "description": "LeftAlt + b_DebugStart (vscode)_ver2",
+      "manipulators":
+      <%=
+               each_key(
+                 source_keys_list: ["b"],
+                 from_mandatory_modifiers: ["left_alt"],
+                 dest_keys_list: ["b"],
+                 to_modifiers: ["right_alt"],
+                 as_json: true
+               )
+       %>
+    },
+    {
+      "description": "LeftAlt + T_Terminal Focus (vscode)_ver2",
+      "manipulators":
+      <%=
+               each_key(
+                 source_keys_list: ["t"],
+                 from_mandatory_modifiers: ["left_alt"],
+                 dest_keys_list: ["4"],
+                 to_modifiers: ["left_control","left_alt"],
+                 as_json: true
+               )
+       %>
+    },
+    {
+      "description": "RightCommand + comma_Terminal Panel Max Toggle (vscode)_ver1",
+      "manipulators":
+      <%=
+               each_key(
+                 source_keys_list: ["comma"],
+                 from_mandatory_modifiers: ["right_gui"],
+                 dest_keys_list: ["o"],
+                 to_modifiers: ["left_control","left_alt"],
+                 as_json: true
+               )
+       %>
+    },
+    {
+      "description": "Terminal Clear (vscode)_ver2",
+      "manipulators":
+      <%=
+               each_key(
+                 source_keys_list: ["v"],
+                 from_mandatory_modifiers: ["left_alt"],
+                 dest_keys_list: ["2"],
+                 to_modifiers: ["right_control","left_alt"],
+                 as_json: true
+               )
+       %>
+    }
+  ]
+}

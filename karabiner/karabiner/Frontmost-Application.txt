@@ -1,0 +1,8 @@
+Bundle Identifier:  com.google.Chrome
+File Path:          /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+
+Bundle Identifier:  com.sublimetext.3
+File Path:          /Applications/Sublime Text.app/Contents/MacOS/Sublime Text
+
+Bundle Identifier:  com.apple.finder
+File Path:          /System/Library/CoreServices/Finder.app/Contents/MacOS/Finder

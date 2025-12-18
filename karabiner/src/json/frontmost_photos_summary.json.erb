@@ -1,0 +1,17 @@
+{
+    "title": "FrontmostIfPhotes_summary",
+    "rules": [
+      {
+        "description": "FrontmostIfPhotes_summary",
+        "manipulators": [
+          {
+            "description": "RightCommand + Space_delete(photos)",
+            "type": "basic",
+            "from": <%= from("spacebar", ["right_gui"]) %>,
+            "to": <%= to([["delete_or_backspace"]]) %>,
+            "conditions": [ <%= frontmost_application_if("photos") %> ]
+          }
+        ]
+      }
+    ]
+}
